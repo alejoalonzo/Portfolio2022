@@ -1,1 +1,161 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*Fonts*/
+@font-face {
+  font-family: "Jaapokki-Regular";
+  src: url("./fonts/Jaapokki-Regular.otf");
+}
+$titleFont: "Jaapokki-Regular";
+
+@font-face {
+  font-family: "Jaapokkienchance-Regular";
+  src: url("./fonts/Jaapokkienchance-Regular.otf");
+}
+$titleFont2: "Jaapokkienchance-Regular";
+
+@font-face {
+  font-family: "Jaapokkisubtract-Regular";
+  src: url("./fonts/Jaapokkisubtract-Regular.otf");
+}
+$titleFontSubtract: "Jaapokkisubtract-Regular";
+
+@font-face {
+  font-family: "MavenPro-Regular";
+  src: url("./fonts/MavenPro-Regular.ttf");
+}
+$textFontGeneral: "MavenPro-Regular";
+
+/*General styles*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: gray;
+  font-family: $textFontGeneral;
+}
+
+/*global colors*/
+$backgroundColorGlobalPrimary: #ffffff;
+$backgroundColorGlobalSecundary: #f4f4f6;
+$backgroundColorFormBox: #eeeef0;
+$backgroundColorDarkPrimary: #35373e;
+$backgroundColorDarkSecundary: #2d2f35;
+$TextColorGlobalPrimary: #35373e;
+$TextColorGlobalSecundary: #acafba;
+$TextColorGlobalDarkBG: #ffffff;
+
+/*Header-----------------------------------------------------------------------------*/
+header {
+  width: 100%;
+  height: 1080px;
+  display: flex;
+  background-color: $backgroundColorGlobalPrimary;
+}
+#squareTitle {
+  margin: auto;
+  border: 5px solid $TextColorGlobalPrimary;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+#title {
+  font-family: $titleFont;
+  font-weight: 500;
+  color: $TextColorGlobalPrimary;
+  font-size: 80px;
+  text-align: center;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin: 70px 70px 10px 70px;
+}
+#subTitle {
+  color: $TextColorGlobalSecundary;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*---------------------------------sideBars-------------------------------------*/
+#day {
+  position: fixed;
+  top: 450px;
+  height: 50px;
+  width: 50px;
+  background-color: $backgroundColorDarkPrimary;
+  border-top: 1px solid $TextColorGlobalSecundary;
+  border-right: 1px solid $TextColorGlobalSecundary;
+}
+
+#night {
+  position: fixed;
+  top: 500px;
+  height: 50px;
+  width: 50px;
+  background-color: $backgroundColorDarkPrimary;
+  border-top: 1px solid $TextColorGlobalSecundary;
+  border-right: 1px solid $TextColorGlobalSecundary;
+  border-bottom: 1px solid $TextColorGlobalSecundary;
+}
+
+#linkedin {
+  position: fixed;
+  top: 450px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: $backgroundColorDarkPrimary;
+  border-top: 1px solid $TextColorGlobalSecundary;
+  border-left: 1px solid $TextColorGlobalSecundary;
+}
+
+#youtube {
+  position: fixed;
+  top: 500px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: $backgroundColorDarkPrimary;
+  border-top: 1px solid $TextColorGlobalSecundary;
+  border-left: 1px solid $TextColorGlobalSecundary;
+}
+
+#github {
+  position: fixed;
+  top: 550px;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background-color: $backgroundColorDarkPrimary;
+  border-top: 1px solid $TextColorGlobalSecundary;
+  border-left: 1px solid $TextColorGlobalSecundary;
+  border-bottom: 1px solid $TextColorGlobalSecundary;
+}
+
+/*------------------------------------------------Menu---------------------*/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 70px;
+  border-bottom: 1px solid $backgroundColorGlobalPrimary;
+  background-color: $backgroundColorGlobalSecundary;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+  width: 65%;
+}
+nav ul li {
+  text-decoration: none;
+  margin: 25px;
+  font-family: $titleFont;
+  font-size: 12px;
+  color: $TextColorGlobalPrimary;
+}
+
+/*------------------------------------------------About---------------------*/
+#aboutMe {
+  height: 850px;
+  background-color: $backgroundColorGlobalSecundary;
+}
