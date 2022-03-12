@@ -16,30 +16,39 @@
 <!-- sideBars ------------------------------------------------------------------------>
 
 <div id="switchColor">
-  <div id="day"></div>
-  <div id="night"></div>
+  <div id="day" class="boxSideBars">
+    <fa-icon [icon]="faSun" class="socialIcons"></fa-icon>
+  </div>
+  <div id="night" class="boxSideBars">
+    <fa-icon [icon]="faMoon" class="socialIcons"></fa-icon>
+  </div>
 </div>
-<div id="social">
-  <div id="linkedin"></div>
-  <div id="youtube"></div>
-  <div id="github"></div>
+<div id="social" class="boxSideBars">
+  <div id="linkedin" class="boxSideBars">
+    <fa-icon [icon]="faLinkedinIn" class="socialIcons"></fa-icon>
+  </div>
+  <div id="youtube" class="boxSideBars">
+    <fa-icon [icon]="faYoutube" class="socialIcons"></fa-icon>
+  </div>
+  <div id="github" class="boxSideBars">
+    <fa-icon [icon]="faGitHub" class="socialIcons"></fa-icon>
+  </div>
 </div>
 
 <!-- navbar------------------------------------------------------------------------ -->
 <nav>
+
+
   <ul>
-    <li><a [routerLink]="['/about-me']">About</a></li>
-    <li><a [routerLink]="['/projects']">Projects</a></li>
-    <li><a [routerLink]="['/create']">Create</a></li>
-    <li><a [routerLink]="['/contact']">Contact</a></li>
+    <li id="homeBtnMenu"><a [routerLink]="['']" [routerLinkActive]="['actived']">Alejo</a></li>
+    <li><a [routerLink]="['/about-me']" [routerLinkActive]="['actived']">About</a></li>
+    <li><a [routerLink]="['/projects']" [routerLinkActive]="['actived']">Projects</a></li>
+    <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">Create</a></li>
+    <li><a [routerLink]="['/contact']" [routerLinkActive]="['actived']">Contact</a></li>
   </ul>
 </nav>
 
-
-<!-- about------------------------------------------------------------------------ -->
-<section id="aboutMe">
-
-</section>
-
+<!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+<!-- <fa-icon [icon]="faFolderOpen"></fa-icon> -->
 
 <router-outlet></router-outlet>

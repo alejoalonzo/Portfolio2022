@@ -29,6 +29,7 @@ $textFontGeneral: "MavenPro-Regular";
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: gray;
@@ -48,7 +49,7 @@ $TextColorGlobalDarkBG: #ffffff;
 /*Header-----------------------------------------------------------------------------*/
 header {
   width: 100%;
-  height: 1080px;
+  height: 1000px;
   display: flex;
   background-color: $backgroundColorGlobalPrimary;
 }
@@ -77,59 +78,48 @@ header {
 }
 
 /*---------------------------------sideBars-------------------------------------*/
-#day {
+.boxSideBars {
   position: fixed;
-  top: 450px;
   height: 50px;
   width: 50px;
   background-color: $backgroundColorDarkPrimary;
   border-top: 1px solid $TextColorGlobalSecundary;
   border-right: 1px solid $TextColorGlobalSecundary;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#day {
+  top: 400px;
+  left: 0;
 }
 
 #night {
-  position: fixed;
-  top: 500px;
-  height: 50px;
-  width: 50px;
-  background-color: $backgroundColorDarkPrimary;
-  border-top: 1px solid $TextColorGlobalSecundary;
-  border-right: 1px solid $TextColorGlobalSecundary;
+  top: 450px;
+  left: 0;
   border-bottom: 1px solid $TextColorGlobalSecundary;
 }
 
 #linkedin {
-  position: fixed;
-  top: 450px;
+  top: 400px;
   right: 0;
-  height: 50px;
-  width: 50px;
-  background-color: $backgroundColorDarkPrimary;
-  border-top: 1px solid $TextColorGlobalSecundary;
-  border-left: 1px solid $TextColorGlobalSecundary;
 }
 
 #youtube {
-  position: fixed;
-  top: 500px;
+  top: 450px;
   right: 0;
-  height: 50px;
-  width: 50px;
-  background-color: $backgroundColorDarkPrimary;
-  border-top: 1px solid $TextColorGlobalSecundary;
-  border-left: 1px solid $TextColorGlobalSecundary;
 }
 
 #github {
-  position: fixed;
-  top: 550px;
+  top: 500px;
   right: 0;
-  height: 50px;
-  width: 50px;
-  background-color: $backgroundColorDarkPrimary;
-  border-top: 1px solid $TextColorGlobalSecundary;
-  border-left: 1px solid $TextColorGlobalSecundary;
   border-bottom: 1px solid $TextColorGlobalSecundary;
+}
+.socialIcons {
+  color: $backgroundColorGlobalSecundary;
+  margin: 0;
+  font-size: 1.8rem;
 }
 
 /*------------------------------------------------Menu---------------------*/
@@ -140,22 +130,220 @@ nav {
   height: 70px;
   border-bottom: 1px solid $backgroundColorGlobalPrimary;
   background-color: $backgroundColorGlobalSecundary;
+  // text-decoration: none;
 }
 nav ul {
   display: flex;
   justify-content: end;
   width: 65%;
 }
-nav ul li {
-  text-decoration: none;
+nav ul #homeBtnMenu {
+  margin-right: 70%;
+}
+nav li {
   margin: 25px;
   font-family: $titleFont;
-  font-size: 12px;
+  list-style-type: none;
+}
+nav a {
+  text-decoration: none;
   color: $TextColorGlobalPrimary;
+  font-size: 15px;
+  padding: 5px;
+  border: 3px solid transparent;
+  transition: all 400ms;
+}
+nav a:hover,
+.actived {
+  border: 3px solid $TextColorGlobalPrimary;
 }
 
 /*------------------------------------------------About---------------------*/
 #aboutMe {
   height: 850px;
   background-color: $backgroundColorGlobalSecundary;
+  display: flex;
+  justify-content: center;
+}
+#aboutMeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 65%;
+  flex-direction: row;
+  justify-content: center;
+}
+#imgAbout {
+  width: 50%;
+}
+#imgAbout1 {
+  width: 50%;
+  height: auto;
+  margin: 15px;
+  //box-shadow: 6px 3px 19px -1px rgb(0 0 0 / 40%);
+}
+#imgAbout2 {
+  width: 30%;
+  height: auto;
+  margin: 15px;
+  padding-bottom: 40px;
+}
+#textAbout {
+  justify-content: end;
+  width: 50%;
+}
+#titles {
+  font-family: $titleFont;
+  font-size: 40px;
+  color: $TextColorGlobalPrimary;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#descriptionAbout {
+  color: $TextColorGlobalSecundary;
+  line-height: 1.3em;
+}
+
+/*------------------------------------------------Projects---------------------*/
+#project {
+  width: 100%;
+  height: 1000px;
+  background-color: $backgroundColorGlobalPrimary;
+}
+
+/**************************************************************************************CREATE*****************************/
+
+#createProject {
+  width: 100%;
+  height: 850px;
+  display: flex;
+}
+#imgCreateProject {
+  margin: 0;
+  width: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./assets/media/computer.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#imgCreateProject h1 {
+  box-sizing: content-box;
+  font-family: $titleFont;
+  font-weight: 300;
+  font-size: 80px;
+  color: $TextColorGlobalDarkBG;
+  text-align: center;
+  line-height: 1em;
+  border: 5px solid $backgroundColorGlobalPrimary;
+  padding: 35px;
+}
+
+.containerForm {
+  width: 50%;
+}
+
+/*FORM*/
+.containerForm {
+  display: flex;
+  justify-content: center;
+  /*align-items: center;*/
+  background: $backgroundColorGlobalSecundary;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.containerForm h2 {
+  font-family: "Jaapokki-Regular";
+  font-weight: 300;
+  font-size: 50px;
+  color: #35373e;
+  margin-bottom: 20px;
+  padding-left: 15px;
+}
+
+form label {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+  width: 90%;
+  margin-top: 5px;
+  padding: 15px 5px 5px 20px;
+  font-size: 1.1rem;
+  color: $TextColorGlobalSecundary;
+  border: none;
+}
+form input::placeholder {
+  font-family: $textFontGeneral !important;
+  color: $TextColorGlobalSecundary;
+  font-size: 1.1rem;
+}
+form textarea::placeholder {
+  font-family: $textFontGeneral !important;
+  color: $TextColorGlobalSecundary;
+  font-size: 1.1rem;
+}
+
+.OpenAndSubmit {
+  display: flex;
+  align-items: center;
+}
+.file {
+  width: 45%;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+.file input {
+  display: none;
+}
+.file label {
+  font-size: 1.1rem;
+  padding: 15px 5px 5px 20px;
+  text-align: left;
+  font-family: "MavenPro-Regular";
+  background-color: $backgroundColorGlobalPrimary;
+  border: 1px solid $TextColorGlobalSecundary;
+  color: $TextColorGlobalSecundary;
+  cursor: pointer;
+}
+
+#iconFolder {
+  font-size: 1.3rem;
+  text-align: end;
+  color: $TextColorGlobalSecundary;
+  margin-left: 10px;
+}
+.submitForm {
+  width: 45%;
+}
+form input[type="submit"],
+form button {
+  margin-top: 15px;
+  padding: 15px 5px 9px 20px;
+  font-size: 1.1rem;
+  text-align: left;
+  font-family: $textFontGeneral;
+  background-color: $backgroundColorGlobalPrimary;
+  border: 1px solid $TextColorGlobalSecundary;
+  color: $TextColorGlobalSecundary;
+  cursor: pointer;
+  width: 100%;
+}
+
+form input[disabled] {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.formError {
+  color: red;
+  font-family: $textFontGeneral;
+  font-size: 1.1rem;
+  margin: 5px;
 }
