@@ -13,26 +13,25 @@
             <span>
                 <!-- <label for="name">Name</label> -->
                 <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" placeholder="Name" required>
-                <span class="formError" *ngIf="name.touched && !name.valid">The name is required</span>
+                <span class="formError" *ngIf="name.touched && !name.valid">*</span>
             </span>
             <span>
                 <!-- <label for="description">Description</label> -->
                 <textarea name="description" #description="ngModel" [(ngModel)]="project.description"
                     placeholder="Description" required></textarea>
-                <span class="formError" *ngIf="description.touched && !description.valid">The description is
-                    required</span>
+                <span class="formError" *ngIf="description.touched && !description.valid">*</span>
             </span>
             <span>
                 <!-- <label for="category">Category</label> -->
                 <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category"
                     placeholder="Category" required>
-                <span class="formError" *ngIf="category.touched && !category.valid">The category is required</span>
+                <span class="formError" *ngIf="category.touched && !category.valid">*</span>
             </span>
             <span>
                 <!-- <label for="langs">Languages</label> -->
                 <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" placeholder="Languages"
                     required>
-                <span class="formError" *ngIf="langs.touched && !langs.valid">The languages are required</span>
+                <span class="formError" *ngIf="langs.touched && !langs.valid">*</span>
 
 
             </span>
@@ -42,13 +41,18 @@
                     <label for="image">Open
                         <fa-icon [icon]="faFolderOpen" id="iconFolder"></fa-icon>
                     </label>
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" (change)="fileChangeEvent($event)">
                 </div>
                 <span class="submitForm">
                     <input type="submit" name="" id="" value="Submit" placeholder="Submit"
-                        [disabled]="!projectForm.form.valid">
+                        [disabled]="!projectForm.form.valid" (click)="showModalSwal2success()">
+                    <!-- poner arlert con libreria -->
+                    <span *ngIf="status == 'failed'">
+                        showModalSwal2Error()
+                    </span>
                 </span>
             </div>
+
         </form>
 
     </div>
