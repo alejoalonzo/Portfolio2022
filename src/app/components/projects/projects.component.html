@@ -1,1 +1,35 @@
-<p>projects works!</p>
+<div class="portfolioPage">
+    <div class="containerTitle">
+        <h2>
+            My Projects
+        </h2>
+        <span>
+            A small gallery of recent projects chosen by me. I've done them all together with amazing people from
+            companies around the globe. It's only a drop in the ocean compared to the entire list.
+
+        </span>
+    </div>
+</div>
+<div class="portfolioPage">
+    <div class="projectsContainer">
+        <ul>
+            <li class="projectView" *ngFor="let projects of pro">
+                <img src="{{url+'/getImage/'+projects.image}}" alt="Project image">
+                <h3>{{projects.name}}</h3>
+                <span>{{projects.langs}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- footer------------------------------------------------------------------------ -->
+<footer>
+    <div class="footerTextContainer">
+        <div class="footerText">
+            Let's talk
+            Wanna get in touch or talk about a project?</div>
+        <div class="footerText">
+            Feel free to drop a line in the form at the
+            contact page.
+        </div>
+    </div>
+</footer>

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http"
 import { Observable } from "rxjs";
 import { Project } from "../models/project";
 import { Global } from "./global";
+import { Content } from "@angular/compiler/src/render3/r3_ast";
 
 @Injectable()
 export class ProjectService{
@@ -21,5 +22,10 @@ export class ProjectService{
 
         return this._http.post(this.url+'/save-project',params , {headers:headers});
 
+    }
+
+    getProject(): Observable<any>{
+        let headers = new HttpHeaders().set('Content-type', 'application/json');
+        return this._http.get(this.url+'/projects',{headers:headers});
     }
 }
