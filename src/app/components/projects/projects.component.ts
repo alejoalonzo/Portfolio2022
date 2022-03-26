@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Global } from '../../services/global';
+import { query, style } from '@angular/animations';
 
 @Component({
   selector: 'app-projects',
@@ -33,6 +34,8 @@ export class ProjectsComponent implements OnInit {
       }
     )
   }
+
+
 
 }
 //1Z2E76E20475543766

@@ -46,6 +46,13 @@ $TextColorGlobalPrimary: #35373e;
 $TextColorGlobalSecundary: #acafba;
 $TextColorGlobalDarkBG: #ffffff;
 
+.dark-img {
+  filter: brightness(100%);
+}
+.dark-img:hover {
+  filter: brightness(20%); //mas oscura
+  transition: all 400ms;
+}
 /*Header-----------------------------------------------------------------------------*/
 header {
   width: 100%;
@@ -88,6 +95,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 #day {
   top: 400px;
@@ -411,18 +419,47 @@ form input[disabled] {
   width: 25%;
   float: left;
   list-style: none;
+  overflow: hidden;
 }
 .projectView img {
   width: 100% !important;
-  background-color: red;
+}
+
+.cardsProjects:hover {
+  transform: scale(1.1);
+  transition: 300ms ease-in-out;
 }
 
 .projectView h3 {
   text-align: center;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $TextColorGlobalDarkBG;
+  padding-bottom: 15px;
+}
+.projectView h3:hover {
+}
+.projectView span:hover {
 }
 .projectView span {
   font-size: 0.9rem;
   width: 70%;
   color: $TextColorGlobalSecundary;
   text-align: center;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 5px;
+}
+.seeProjectLink {
+  text-decoration: none;
+  color: $TextColorGlobalDarkBG;
+}
+#butonProject {
+  background-color: $backgroundColorDarkSecundary;
+  color: $backgroundColorGlobalSecundary;
 }

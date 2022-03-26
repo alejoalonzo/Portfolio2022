@@ -13,10 +13,18 @@
 <div class="portfolioPage">
     <div class="projectsContainer">
         <ul>
-            <li class="projectView" *ngFor="let projects of pro">
-                <img src="{{url+'/getImage/'+projects.image}}" alt="Project image">
-                <h3>{{projects.name}}</h3>
-                <span>{{projects.langs}}</span>
+            <li class="projectView " *ngFor="let projects of pro">
+                <div class="cardsProjects">
+                    <img class="dark-img" src="{{url+'/getImage/'+projects.image}}" alt="Project image">
+                    <div>
+                        <h3>{{projects.name}}</h3>
+                        <span>{{projects.langs}}
+                            <br><a class="seeProjectLink" [routerLink]="['/project', projects._id]">See Project</a>
+                        </span>
+
+                    </div>
+
+                </div>
             </li>
         </ul>
     </div>

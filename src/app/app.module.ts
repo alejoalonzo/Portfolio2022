@@ -13,6 +13,7 @@ import { CreateComponent } from './components/create/create.component';
 import { AboutComponent } from './components/about/about.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ContactComponent,
     CreateComponent,
     AboutComponent,
-    ErrorComponent
+    ErrorComponent,
+    DetailComponent
+    
   ],
   imports: [
     BrowserModule,
