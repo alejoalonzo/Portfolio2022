@@ -35,6 +35,9 @@ body {
   background-color: gray;
   font-family: $textFontGeneral;
 }
+.displayNone {
+  display: none;
+}
 
 /*global colors*/
 $backgroundColorGlobalPrimary: #ffffff;
@@ -189,13 +192,13 @@ footer {
 }
 
 /*------------------------------------------------About---------------------*/
-#aboutMe {
+.aboutMe {
   height: 850px;
   background-color: $backgroundColorGlobalSecundary;
   display: flex;
   justify-content: center;
 }
-#aboutMeContainer {
+.aboutMeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,18 +222,18 @@ footer {
   margin: 15px;
   padding-bottom: 40px;
 }
-#textAbout {
+.textAbout {
   justify-content: end;
   width: 50%;
 }
-#titles {
+.titles {
   font-family: $titleFont;
   font-size: 40px;
   color: $TextColorGlobalPrimary;
   font-weight: 400;
   margin-bottom: 30px;
 }
-#descriptionAbout {
+.descriptionAbout {
   color: $TextColorGlobalSecundary;
   line-height: 1.3em;
 }
@@ -462,4 +465,35 @@ form input[disabled] {
 #butonProject {
   background-color: $backgroundColorDarkSecundary;
   color: $backgroundColorGlobalSecundary;
+}
+
+/******************************************DETAIL***************************************/
+.imgeLeftMedium {
+  width: 40%;
+  margin-right: 50px;
+}
+.bottonsProjecrtsDetail {
+  width: 100%;
+}
+.bottonsProjecrtsDetail button {
+  width: 48%;
+  margin: 20px 3px 0 0;
+  border: none;
+  border-radius: none;
+  background-color: $backgroundColorDarkSecundary;
+  color: $backgroundColorGlobalSecundary;
+  padding: 10px;
+  cursor: pointer;
+}
+.bottonsProjecrtsDetail fa-icon {
+  margin-right: 20px;
+}
+.category {
+  color: $TextColorGlobalSecundary;
+  margin: 15px;
+}
+.languages {
+  color: $TextColorGlobalSecundary;
+
+  margin-left: 15px;
 }

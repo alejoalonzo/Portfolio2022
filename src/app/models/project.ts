@@ -5,8 +5,9 @@ export class Project {
         public description: String,
         public category: String,
         public langs: String,
-        public image: String
-
+        public image: String,
+        public repository: String,
+        public preview: String
     ){};
 }
 

@@ -1,4 +1,4 @@
-<div id="createProject">
+<div id="createProject" *ngIf="project">
     <div id="imgCreateProject">
         <div id="tilleImgCreateProject">
             <h1>Another <br>project</h1>
@@ -32,8 +32,18 @@
                 <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" placeholder="Languages"
                     required>
                 <span class="formError" *ngIf="langs.touched && !langs.valid">*</span>
-
-
+            </span>
+            <span>
+                <!-- <label for="repository">Repository</label> -->
+                <input type="text" name="repository" #repository="ngModel" [(ngModel)]="project.repository"
+                    placeholder="Link to repository" required>
+                <span class="formError" *ngIf="langs.touched && !langs.valid">*</span>
+            </span>
+            <span>
+                <!-- <label for="preview">Preview</label> -->
+                <input type="text" name="preview" #preview="ngModel" [(ngModel)]="project.preview"
+                    placeholder="Link to preview" required>
+                <span class="formError" *ngIf="langs.touched && !langs.valid">*</span>
             </span>
             <div class="OpenAndSubmit">
                 <div class="file">

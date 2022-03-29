@@ -1,8 +1,51 @@
-<div>
-    <img src="{{url+'/getImage/'+project.image}}" alt="Project image">
+<div class="aboutMe" *ngIf="project">
+    <div class="aboutMeContainer">
+        <img class="imgeLeftMedium" src="{{url+'/getImage/'+project.image}}" alt="Project image" *ngIf="project.image">
 
-    <h1>{{project.name}}</h1>
-    <span>{{project.description}}</span>
-    <h3>{{project.category}}</h3>
-    <span>{{project.langs}}</span>
+        <div class="textAbout">
+            <h3 class="titles">
+                {{project.name}}
+            </h3>
+            <span class="descriptionAbout">
+                {{project.description}}
+            </span>
+            <h3 class="category">Category: {{project.category}}</h3>
+            <h3 class="languages">Languages</h3>
+            <span class="languages">{{project.langs}}</span>
+            <div class="bottonsProjecrtsDetail">
+                <a class="seeProjectLink" href="{{project.repository}}" target="_blank" rel="noopener noreferrer">
+                    <button>
+                        <fa-icon [icon]="faGitHub" class="socialIcons"></fa-icon>
+                        See this repository
+
+                    </button>
+                </a>
+                <a class="seeProjectLink" href="{{project.preview}}" target="_blank" rel="noopener noreferrer">
+                    <button>
+                        <fa-icon [icon]="faYoutube" class="socialIcons"></fa-icon>
+                        Watch a preview
+                    </button>
+                </a>
+            </div>
+            <div class="bottonsProjecrtsDetail" *ngIf="confirm == false">
+                <a [routerLink]="['/edit', project._id]"><button>
+                        Set project
+                    </button></a>
+                <button (click)="setConfirm(true)">
+                    Delete project
+                </button>
+            </div>
+            <div class="bottonsProjecrtsDetail" *ngIf="confirm == true">
+                <a (click)="setConfirm(false)"><button>
+                        Cancel
+                    </button></a>
+                <button (click)="deleteProject(project._id)">
+                    Permanently delete
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!-- (click)="deleteProject(project._id)"> -->

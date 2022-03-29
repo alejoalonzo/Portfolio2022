@@ -14,6 +14,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailComponent } from './components/detail/detail.component';
+import { EditComponent } from './components/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DetailComponent } from './components/detail/detail.component';
     CreateComponent,
     AboutComponent,
     ErrorComponent,
-    DetailComponent
+    DetailComponent,
+    EditComponent
     
   ],
   imports: [
