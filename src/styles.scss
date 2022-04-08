@@ -34,9 +34,57 @@ $textFontGeneral: "MavenPro-Regular";
 body {
   background-color: gray;
   font-family: $textFontGeneral;
+  margin: 0px;
 }
 .displayNone {
   display: none;
+}
+.marginTop50{
+  margin-top: 50px;
+}
+.marginTop100{
+  margin-top: 100px;
+}
+.marginTop200{
+  margin-top: 200px;
+}
+.paddingTop50{
+  padding-top: 50px;
+}
+.paddingTop100{
+  padding-top: 100px;
+}
+.paddingTop200{
+  padding-top: 200px;
+}
+.marginBottom50{
+  margin-bottom: 50px;
+}
+.marginBottom100{
+  margin-bottom: 100px;
+}
+.marginBottom200{
+  margin-bottom: 200px;
+}
+.paddingBottom50{
+  padding-bottom: 50px;
+}
+.paddingBottom100{
+  padding-bottom: 100px;
+}
+.paddingBottom200{
+  padding-bottom: 200px;
+}
+
+.paddingLeft20{
+  padding-left: 20px;
+}
+.paddingRight40{
+  padding-right: 40px;
+}
+
+a{
+  text-decoration: none;
 }
 
 /*global colors*/
@@ -48,6 +96,7 @@ $backgroundColorDarkSecundary: #2d2f35;
 $TextColorGlobalPrimary: #35373e;
 $TextColorGlobalSecundary: #acafba;
 $TextColorGlobalDarkBG: #ffffff;
+$customBlue: #00ADB5;
 
 .dark-img {
   filter: brightness(100%);
@@ -237,6 +286,49 @@ footer {
   color: $TextColorGlobalSecundary;
   line-height: 1.3em;
 }
+.paddingRight200{
+  padding-right: 200px;
+}
+/*------------------------------------------------SkillSet---------------------*/
+.skillSetContainer{
+  height: auto;
+  width: 100%;
+  background-color: $backgroundColorGlobalPrimary;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes scroll{
+  0%{
+transform: translateX(0);
+  }
+  100%{
+   transform: translateX(calc(-150px*12)); 
+  }
+}
+.slider{
+  height: 80px;
+  margin:auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  background-color:$backgroundColorGlobalPrimary;
+}
+.slider .sliderTrack{
+  animation:  scroll 40s linear infinite;
+  display: flex;
+  width: calc(150*24);
+}
+.slider .slide{
+  width: 150px;
+  height: 150px;
+}
+.slider img{
+  width: 55px;
+  height: 55px;
+  margin: 0 20px;
+}
+
 
 /*------------------------------------------------Projects---------------------*/
 #project {
@@ -312,6 +404,9 @@ form textarea {
   color: $TextColorGlobalSecundary;
   border: none;
 }
+form textarea{
+  height: 150px;
+}
 form input::placeholder {
   font-family: $textFontGeneral !important;
   color: $TextColorGlobalSecundary;
@@ -384,6 +479,18 @@ form input[disabled] {
   visibility: hidden;
 }
 
+
+/********************************************CONTACT**************************************/
+#imgContactProject {
+  margin: 0;
+  width: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
+     url("./assets/media/LAcaliformiaMap.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /******************************************PORTFOLIO***************************************/
 
 .portfolioPage {
@@ -423,6 +530,10 @@ form input[disabled] {
   float: left;
   list-style: none;
   overflow: hidden;
+  height: 49%;
+}
+.bgDark{
+  background-color: $backgroundColorDarkSecundary;
 }
 .projectView img {
   width: 100% !important;
@@ -444,6 +555,7 @@ form input[disabled] {
   padding-bottom: 15px;
 }
 .projectView h3:hover {
+
 }
 .projectView span:hover {
 }
