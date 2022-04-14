@@ -1,5 +1,11 @@
 <!-- header---------------------------------------------------------------- -->
 <header>
+  <div class="scrollDown">
+    <span>
+      Scroll down
+    </span>
+    <fa-icon [icon]="faArrowDown"></fa-icon>
+  </div>
   <div id="squareTitle">
     <h1 id="title">
       ale <br>
@@ -9,9 +15,16 @@
     <span id="subTitle">
       Hi there! I'm Alejandro. <br>I'm a web developer.
     </span>
-
   </div>
+  <div class="scrollDown">
+    <span>
+      Scroll down
+    </span>
+    <fa-icon [icon]="faArrowDown"></fa-icon>
+  </div>
+
 </header>
+
 
 <!-- sideBars ------------------------------------------------------------------------>
 
@@ -42,9 +55,7 @@
 </div>
 
 <!-- navbar------------------------------------------------------------------------ -->
-<nav>
-
-
+<nav #navbar>
   <ul>
     <li id="homeBtnMenu"><a [routerLink]="['']" [routerLinkActive]="['actived']">Alejo</a></li>
     <li><a [routerLink]="['/about-me']" [routerLinkActive]="['actived']">About</a></li>
@@ -53,9 +64,6 @@
     <li><a [routerLink]="['/contact']" [routerLinkActive]="['actived']">Contact</a></li>
   </ul>
 </nav>
-
-
-
 
 <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
 <!-- <fa-icon [icon]="faFolderOpen"></fa-icon> -->

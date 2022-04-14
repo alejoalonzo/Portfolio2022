@@ -1,6 +1,6 @@
 <div class="portfolioPage">
     <div class="containerTitle">
-        <h2 id="projectsTitle">
+        <h2 id="projectsTitle" data-aos="fade-down" data-aos-duration="3000">
             My Projects
         </h2>
         <span>
@@ -15,15 +15,15 @@
         <ul class="bgDark">
             <li class="projectView " *ngFor="let projects of pro">
                 <div class="cardsProjects">
-                    <img class="dark-img" src="{{url+'/getImage/'+projects.image}}" alt="Project image">
+                    <img class="dark-img imgPotfolioPage" src="{{url+'/getImage/'+projects.image}}" alt="Project image">
                     <div>
-                        <h3>{{projects.name}}</h3>
-                        <span>{{projects.langs}}
-                            <br><a class="seeProjectLink" [routerLink]="['/project', projects._id]">See Project</a>
+                        <h3 class="hTresPortfolio">{{projects.name}}</h3>
+                        <span class="spanPorfolio">{{projects.langs}}
                         </span>
-
+                        <span class="spanPorfolio2">
+                            <a class="seeProjectLink" [routerLink]="['/project', projects._id]">See Project</a>
+                        </span>
                     </div>
-
                 </div>
             </li>
         </ul>

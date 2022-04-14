@@ -35,6 +35,7 @@ body {
   background-color: gray;
   font-family: $textFontGeneral;
   margin: 0px;
+  overflow-x: hidden;
 }
 .displayNone {
   display: none;
@@ -136,6 +137,37 @@ header {
   margin-bottom: 50px;
 }
 
+.scrollDown{
+ margin: 700px 60px 0 60px;
+ justify-content: end;
+}
+.scrollDown span{
+  display: flex;
+  color: $TextColorGlobalSecundary;
+  font-size: 1.3rem;
+  writing-mode: vertical-lr;
+  margin-bottom: 10px;
+  position : relative;
+  animation-name: subTitle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.scrollDown fa-icon{
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+@keyframes subTitle {
+  0% {
+ bottom: 50px;
+  }
+  50% {
+     bottom: 0px;
+  }
+  100% {
+     bottom: 50px;
+  }
+}
 /*---------------------------------sideBars-------------------------------------*/
 .boxSideBars {
   position: fixed;
@@ -192,9 +224,13 @@ nav {
   flex-direction: row;
   justify-content: center;
   height: 70px;
+  width: 100%;
   border-bottom: 1px solid $backgroundColorGlobalPrimary;
   background-color: $backgroundColorGlobalSecundary;
-  // text-decoration: none;
+  position: fixed;
+  transition-property: top;
+  transition-duration: 500ms;
+  z-index: 1;
 }
 nav ul {
   display: flex;
@@ -337,7 +373,7 @@ transform: translateX(0);
   background-color: $backgroundColorGlobalPrimary;
 }
 
-/**************************************************************************************CREATE*****************************/
+/**********************************************************************************CREATE*****************************/
 
 #createProject {
   width: 100%;
@@ -544,7 +580,8 @@ form input[disabled] {
   transition: 300ms ease-in-out;
 }
 
-.projectView h3 {
+
+.hTresPortfolio {
   text-align: center;
   text-align: center;
   position: absolute;
@@ -553,23 +590,51 @@ form input[disabled] {
   transform: translate(-50%, -50%);
   color: $TextColorGlobalDarkBG;
   padding-bottom: 15px;
+  display: none;
 }
-.projectView h3:hover {
+.projectView:hover .hTresPortfolio {
+  display: flex;
+}
 
-}
-.projectView span:hover {
-}
-.projectView span {
+.spanPorfolio {
   font-size: 0.9rem;
   width: 70%;
   color: $TextColorGlobalSecundary;
+  justify-content: center;
   text-align: center;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-bottom: 5px;
+  display: none;
 }
+
+.spanPorfolio2{
+  font-size: 0.9rem;
+  width: 70%;
+  color: $TextColorGlobalSecundary;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 5px;
+  display: none;
+}
+.projectView:hover .spanPorfolio{
+  display: flex;
+}
+.projectView:hover .spanPorfolio2 {
+  display: flex;
+}
+
+
+.hTresPortfolio:hover .imgPotfolioPage{
+  filter: brightness(20%); //mas oscura
+}
+
 .seeProjectLink {
   text-decoration: none;
   color: $TextColorGlobalDarkBG;
