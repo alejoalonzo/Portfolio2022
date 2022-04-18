@@ -5,29 +5,34 @@
     <div class="containerForm">
         <h2 data-aos="fade-left" data-aos-duration="3000">{{title}}</h2>
 
-        <form>
+        <form #contactForm="ngForm" (ngSubmit)="onSubmitContact(contactForm)">
             <span>
-                <!-- <label for="name">Name</label> -->
-                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" placeholder="Name" required
+                    autofocus>
+                <span class="formError" *ngIf="name.touched && !name.valid">*</span>
             </span>
             <span>
-                <!-- <label for="category">Category</label> -->
-                <input type="email" name="email" placeholder="Email" required>
+                <input type="email" name="email" #email="ngModel" [(ngModel)]="contact.email" placeholder="Email"
+                    required>
+                <span class="formError" *ngIf="email.touched && !email.valid">*</span>
             </span>
             <span>
-                <!-- <label for="langs">Languages</label> -->
-                <input type="text" name="subject" placeholder="Subject" required>
+                <input type="text" name="subject" #subject="ngModel" [(ngModel)]="contact.subject" placeholder="Subject"
+                    required>
             </span>
             <span>
-                <!-- <label for="description">Description</label> -->
-                <textarea name="message" placeholder="Message" required></textarea>
+                <textarea name="message" #message="ngModel" [(ngModel)]="contact.message" placeholder="Message"
+                    required></textarea>
+                <span class="formError" *ngIf="message.touched && !message.valid">*</span>
             </span>
             <div class="OpenAndSubmit">
-                <span class="submitForm">
-
-                    <input type="submit" name="" id="" value="Submit" placeholder="Submit">
-                    <fa-icon [icon]="faArrowRight" id="iconFolder"></fa-icon>
-                </span>
+                <div class="file">
+                    <label for="image">Submit
+                        <fa-icon [icon]="faArrowRight" id="iconFolder"></fa-icon>
+                    </label>
+                    <input type="submit" name="" value="Submit" placeholder="Submit"
+                        [disabled]="!contactForm.form.valid">
+                </div>
             </div>
         </form>
     </div>

@@ -674,3 +674,50 @@ form input[disabled] {
 
   margin-left: 15px;
 }
+
+
+
+
+
+/******************************MEDIA QUERIES****************************************/
+
+/*laptop*/
+
+/*--------------------------------------header--------*/
+@media (max-width: 1550px){
+  header{
+    height: 750px;
+  }
+  
+  #day {
+    top: 350px;
+  }
+
+  #night {
+    top: 300px;
+  }
+
+  #linkedin {
+    top: 250px;
+  }
+
+  #youtube {
+    top: 300px;
+  }
+
+  #github {
+    top: 350px;
+  }
+  .scrollDown{
+    margin: 500px 60px 0 60px;
+    justify-content: end;
+   }
+
+   nav ul {
+    width: 70%;
+  }
+  nav ul #homeBtnMenu {
+    margin-right: 55%;
+  }
+
+}
