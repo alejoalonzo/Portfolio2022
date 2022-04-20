@@ -1,5 +1,27 @@
 <div id="createProject">
     <div id="imgContactProject">
+        <fa-icon [icon]="faMapMarkerAlt" id="faMapMarkerAlt" (mouseover)="changeClass=true"
+            (mouseout)="changeClass=false">
+        </fa-icon>
+        <div class="radar"></div>
+        <div class="radar"></div>
+        <div class="radar"></div>
+        <div [class.active]="changeClass" class="tooltip" id="tooltip" (mouseover)="changeClass=true"
+            (mouseout)="changeClass=false">
+            <div class="thumb">
+                <img src="../assets/media/losAngeles.jpg" alt="">
+            </div>
+            <div class="info">
+                <h3 class="title">I'm here!</h3>
+                <span class="resumen">Feel free to drop a line in the form or text me to 666 00 80 83 and if you prefer
+                    also can get
+                    in touch with me through alejandro.12w@hotmail.com</span>
+                <span class="adress">660 N San Fernando RD, LOS ANGELES, CALIFORNIA 90065 </span>
+                <div class="containerBtn">
+                    <button>Open in Google Maps</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="containerForm">

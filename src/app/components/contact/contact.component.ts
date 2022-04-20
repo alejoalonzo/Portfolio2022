@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import Swal from 'sweetalert2';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faMapMarked, faMapMarker, faMapMarkerAlt, faMapPin } from '@fortawesome/free-solid-svg-icons';
 import { Global } from '../../services/global'; 
 import { ProjectService } from 'src/app/services/project.service';
 import { Contact } from 'src/app/models/contact';
+import { variable } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-contact',
@@ -15,15 +16,18 @@ export class ContactComponent implements OnInit {
 
   public title: String;
   faArrowRight = faArrowRight;
+  faMapMarkerAlt = faMapMarkerAlt;
   public contact: Contact;
   public status: String= '';
-
+  public changeClass:boolean;
+  
 
   constructor(
-    private _projectService: ProjectService
+    private _projectService: ProjectService,
   ) {
     this.title= 'Get in touch';
-    this.contact = new Contact('','','','')
+    this.contact = new Contact('','','','');
+    this.changeClass =false;
    }
 
   ngOnInit(): void {
@@ -54,4 +58,5 @@ export class ContactComponent implements OnInit {
       timer: 3500
     })
   }
+  
 }
