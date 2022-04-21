@@ -13,12 +13,15 @@
             </div>
             <div class="info">
                 <h3 class="title">I'm here!</h3>
-                <span class="resumen">Feel free to drop a line in the form or text me to 666 00 80 83 and if you prefer
+                <span class="resumen">Feel free to drop a line in the form or call me to <a href="tel:+34666008083">+34
+                        666 00 80 83</a> and if you prefer
                     also can get
-                    in touch with me through alejandro.12w@hotmail.com</span>
+                    in touch with me through <a href="mailto:alejandro.12w@hotmail.com"
+                        target="_blank">alejandro.12w@hotmail.com</a></span>
                 <span class="adress">660 N San Fernando RD, LOS ANGELES, CALIFORNIA 90065 </span>
                 <div class="containerBtn">
-                    <button>Open in Google Maps</button>
+                    <a href="https://goo.gl/maps/JxnfjFpTL3JMupHq9" target="_blank" rel="noopener noreferrer">
+                        <button>Open in Google Maps</button></a>
                 </div>
             </div>
         </div>
@@ -48,11 +51,15 @@
                 <span class="formError" *ngIf="message.touched && !message.valid">*</span>
             </span>
             <div class="OpenAndSubmit">
-                <div class="file">
+                <!-- <div class="file">
                     <label for="image">Submit
                         <fa-icon [icon]="faArrowRight" id="iconFolder"></fa-icon>
                     </label>
-                    <input type="submit" name="" value="Submit" placeholder="Submit"
+                    <input type="submit" name="" value="Submit" placeholder="Submit">
+                    
+                </div> -->
+                <div class="submitForm">
+                    <input type="submit" name="" id="" value="Submit" placeholder="Submit"
                         [disabled]="!contactForm.form.valid">
                 </div>
             </div>

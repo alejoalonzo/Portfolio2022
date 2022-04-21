@@ -17,10 +17,13 @@
                 <div class="cardsProjects">
                     <img class="dark-img imgPotfolioPage" src="{{url+'/getImage/'+projects.image}}" alt="Project image">
                     <div>
-                        <h3 class="hTresPortfolio">{{projects.name}}</h3>
-                        <span class="spanPorfolio">{{projects.langs}}
+                        <h3 (mouseover)="changeClass=true" (mouseout)="changeClass=false" class="hTresPortfolio">
+                            {{projects.name}}
+                        </h3>
+                        <span (mouseover)="changeClass=true" (mouseout)="changeClass=false"
+                            class="spanPorfolio">{{projects.langs}}
                         </span>
-                        <span class="spanPorfolio2">
+                        <span (mouseover)="changeClass=true" (mouseout)="changeClass=false" class="spanPorfolio2">
                             <a class="seeProjectLink" [routerLink]="['/project', projects._id]">See Project</a>
                         </span>
                     </div>

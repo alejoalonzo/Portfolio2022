@@ -659,6 +659,14 @@ form input[disabled] {
     cursor: pointer;
  }
 
+ .tooltip a{
+   color: $TextColorGlobalSecundary;
+   text-decoration: underline;
+ }
+ .tooltip a:hover{
+  text-decoration: none;
+}
+
 /******************************************PORTFOLIO***************************************/
 
 .portfolioPage {
@@ -767,6 +775,7 @@ form input[disabled] {
   filter: brightness(20%); //mas oscura
 }
 
+
 .seeProjectLink {
   text-decoration: none;
   color: $TextColorGlobalDarkBG;
@@ -775,6 +784,11 @@ form input[disabled] {
   background-color: $backgroundColorDarkSecundary;
   color: $backgroundColorGlobalSecundary;
 }
+
+// .backgroundDarkImgPorfolio{
+//   filter: brightness(20%); //mas oscura
+//   transition: all 400ms;
+// }
 
 /******************************************DETAIL***************************************/
 .imgeLeftMedium {

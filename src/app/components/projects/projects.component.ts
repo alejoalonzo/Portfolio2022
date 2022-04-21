@@ -13,11 +13,14 @@ import { query, style } from '@angular/animations';
 export class ProjectsComponent implements OnInit {
   public pro: Project[] = [];
   public url: String;
+  public changeClass:boolean;
+
   constructor(
     private _projectService: ProjectService
 
   ) {
     this.url= Global.url;
+    this.changeClass =false;
    }
 
   ngOnInit(): void {
