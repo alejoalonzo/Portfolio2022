@@ -242,7 +242,8 @@ nav ul #homeBtnMenu {
 }
 nav li {
   margin: 25px;
-  font-family: $titleFont;
+  font-family: $textFontGeneral;
+  font-weight: bold;
   list-style-type: none;
 }
 nav a {
@@ -250,12 +251,12 @@ nav a {
   color: $TextColorGlobalPrimary;
   font-size: 15px;
   padding: 5px;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   transition: all 400ms;
 }
 nav a:hover,
 .actived {
-  border: 3px solid $TextColorGlobalPrimary;
+  border: 2px solid $TextColorGlobalPrimary;
 }
 /*****************************************Footer******************************/
 footer {
@@ -299,7 +300,8 @@ footer {
   width: 50%;
   height: auto;
   margin: 15px;
-  //box-shadow: 6px 3px 19px -1px rgb(0 0 0 / 40%);
+  border: 5px solid $TextColorGlobalPrimary;
+  //box-shadow: 5px 5px 50px rgba(0, 0, 0, .20);
 }
 #imgAbout2 {
   width: 30%;
@@ -729,8 +731,9 @@ form input[disabled] {
   left: 50%;
   transform: translate(-50%, -50%);
   color: $TextColorGlobalDarkBG;
-  padding-bottom: 15px;
+  padding-bottom: 0;
   display: none;
+  
 }
 .projectView:hover .hTresPortfolio {
   display: flex;
@@ -738,7 +741,7 @@ form input[disabled] {
 
 .spanPorfolio {
   font-size: 0.9rem;
-  width: 70%;
+  width: 45%;
   color: $TextColorGlobalSecundary;
   justify-content: center;
   text-align: center;
@@ -746,7 +749,7 @@ form input[disabled] {
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-bottom: 5px;
+  margin-bottom: 0;
   display: none;
 }
 
@@ -760,7 +763,7 @@ form input[disabled] {
   top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-bottom: 5px;
+  margin-bottom: 0;
   display: none;
 }
 .projectView:hover .spanPorfolio{
@@ -768,11 +771,6 @@ form input[disabled] {
 }
 .projectView:hover .spanPorfolio2 {
   display: flex;
-}
-
-
-.hTresPortfolio:hover .imgPotfolioPage{
-  filter: brightness(20%); //mas oscura
 }
 
 
@@ -785,10 +783,26 @@ form input[disabled] {
   color: $backgroundColorGlobalSecundary;
 }
 
-// .backgroundDarkImgPorfolio{
-//   filter: brightness(20%); //mas oscura
-//   transition: all 400ms;
-// }
+.backgroundDarkImgPorfolio{
+  filter: brightness(20%); //mas oscura
+  transition: all 400ms;
+}
+
+.squreTextPorfolio{
+  height: 250px;
+  width: 250px;
+  border: 5px solid $backgroundColorGlobalPrimary;
+  background-color: transparent;
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 125px);
+  display: none;
+}
+.projectView:hover .squreTextPorfolio {
+  display: flex;
+}
+
+
 
 /******************************************DETAIL***************************************/
 .imgeLeftMedium {
@@ -810,6 +824,16 @@ form input[disabled] {
 }
 .bottonsProjecrtsDetail fa-icon {
   margin-right: 20px;
+}
+.bottonsGoBack{
+  width: calc(96% + 3px);
+  height: 35px;
+  border: none;
+  border-radius: none;
+  background-color: $backgroundColorDarkPrimary;
+  margin-top: 3px;
+  color: $backgroundColorGlobalPrimary;
+  cursor: pointer;
 }
 .category {
   color: $TextColorGlobalSecundary;
@@ -872,6 +896,19 @@ form input[disabled] {
   }
   #createProject{
     height: 680px;
+  }
+  
+  .squreTextPorfolio {
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    top: calc(50% - 110px);
+    left: calc(50% - 110px);
+    display: none;
+}
+
+  .aboutMe {
+      height: 750px;
   }
 
 }

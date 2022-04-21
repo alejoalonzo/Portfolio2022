@@ -4,6 +4,7 @@ import { ProjectService } from '../../services/project.service';
 import { Global } from '../../services/global';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-detail',
@@ -17,6 +18,7 @@ export class DetailComponent implements OnInit {
   public url: String;
   faGitHub = faGithub;
   faYoutube = faYoutube;
+  faArrowLeft = faArrowLeft;
   public confirm: boolean;
 
   constructor(

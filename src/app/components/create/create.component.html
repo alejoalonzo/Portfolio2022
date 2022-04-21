@@ -56,15 +56,8 @@
                 <span class="submitForm">
                     <input type="submit" name="" id="" value="Submit" placeholder="Submit"
                         [disabled]="!projectForm.form.valid" (click)="showModalSwal2success()">
-                    <!-- poner arlert con libreria -->
-                    <span *ngIf="status == 'failed'">
-                        showModalSwal2Error()
-                    </span>
                 </span>
             </div>
-
         </form>
-
     </div>
-
 </div>
