@@ -11,7 +11,7 @@
 </div>
 <div class="portfolioPage">
     <div class="projectsContainer">
-        <ul class="bgDark">
+        <ul class="bgDark" id="portfolioPage">
             <li class="projectView" *ngFor="let projects of pro">
                 <div class="cardsProjects">
                     <img src="{{url+'/getImage/'+projects.image}}" alt="Project image" class="imgPotfolioPage dark-img"
@@ -26,7 +26,8 @@
                     <div class="squreTextPorfolio" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
                     </div>
                     <span class="spanPorfolio2" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
-                        <a class="seeProjectLink" [routerLink]="['/project', projects._id]">See Project</a>
+                        <a class="seeProjectLink" [routerLink]="['/project', projects._id]"
+                            fragment="projectDetailContainer">See Project</a>
                     </span>
                 </div>
             </li>

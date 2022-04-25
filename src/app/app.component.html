@@ -1,12 +1,14 @@
 <!-- header---------------------------------------------------------------- -->
-<header>
+<!-- <canvas id="scene" #scene></canvas>
+<input id="copy" #copy type="text" value="Ale" /> -->
+<header id="header">
   <div class="scrollDown">
     <span>
       Scroll down
     </span>
     <fa-icon [icon]="faArrowDown"></fa-icon>
   </div>
-  <div id="squareTitle">
+  <div data-aos="zoom-out" id="squareTitle">
     <h1 id="title">
       ale <br>
       web <br>
@@ -27,14 +29,18 @@
 
 
 <!-- sideBars ------------------------------------------------------------------------>
-
 <div id="switchColor">
-  <div id="day" class="boxSideBars">
-    <fa-icon [icon]="faSun" class="socialIcons"></fa-icon>
-  </div>
-  <div id="night" class="boxSideBars">
-    <fa-icon [icon]="faMoon" class="socialIcons"></fa-icon>
-  </div>
+  <a href="https://api.whatsapp.com/send?phone=34666008083&text=Hello!&nbsp;Can&nbsp;you&nbsp;help&nbsp;me?"
+    target="_blank" rel="noopener noreferrer">
+    <div id="day" class="boxSideBars">
+      <fa-icon [icon]="faWhatsapp" class="socialIcons"></fa-icon>
+    </div>
+  </a>
+  <a href="mailto:alejandro.12w@hotmail.com" target="_blank" rel="noopener noreferrer">
+    <div id="night" class="boxSideBars">
+      <fa-icon [icon]="faMailBulk" class="socialIcons"></fa-icon>
+    </div>
+  </a>
 </div>
 <div id="social" class="boxSideBars">
   <a href="https://www.linkedin.com/in/alejandro-alonzo-69639a38/" target="_blank" rel="noopener noreferrer">
@@ -58,10 +64,10 @@
 <nav #navbar>
   <ul>
     <li id="homeBtnMenu"><a [routerLink]="['']" [routerLinkActive]="['actived']">ALE</a></li>
-    <li><a [routerLink]="['/about-me']" [routerLinkActive]="['actived']">ABOUT</a></li>
-    <li><a [routerLink]="['/projects']" [routerLinkActive]="['actived']">PROJECTS</a></li>
+    <li><a [routerLink]="['/about-me']" fragment="aboutMe" [routerLinkActive]="['actived']">ABOUT</a></li>
+    <li><a [routerLink]="['/projects']" fragment="projectsTitle" [routerLinkActive]="['actived']">PROJECTS</a></li>
     <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">CREATE</a></li>
-    <li><a [routerLink]="['/contact']" [routerLinkActive]="['actived']">CONTACT</a></li>
+    <li><a [routerLink]="['/contact']" fragment="createProject" [routerLinkActive]="['actived']">CONTACT</a></li>
   </ul>
 </nav>
 

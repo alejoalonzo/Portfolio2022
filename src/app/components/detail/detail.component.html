@@ -1,5 +1,5 @@
 <div class="aboutMe" *ngIf="project">
-    <div class="aboutMeContainer">
+    <div class="aboutMeContainer" id="projectDetailContainer">
         <img class="imgeLeftMedium" src="{{url+'/getImage/'+project.image}}" alt="Project image" *ngIf="project.image">
         <div class="textAbout">
             <h3 class="titles">
@@ -27,7 +27,7 @@
                 </a>
 
             </div>
-            <div class="bottonsProjecrtsDetail displayNone" *ngIf="confirm == false">
+            <div class="bottonsProjecrtsDetail" *ngIf="confirm == false">
                 <a [routerLink]="['/edit', project._id]"><button>
                         Set project
                     </button></a>
@@ -43,7 +43,7 @@
                     Permanently delete
                 </button>
             </div>
-            <a [routerLink]="['/projects']">
+            <a [routerLink]="['/projects']" fragment="portfolioPage">
                 <button class="bottonsGoBack">
                     <fa-icon [icon]="faArrowLeft"></fa-icon>&nbsp; &nbsp;Go back to all projects
                 </button>
