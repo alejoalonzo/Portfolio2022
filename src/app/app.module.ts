@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 
+
 const routerOptions: ExtraOptions = {
   anchorScrolling: "enabled",
   scrollPositionRestoration: 'enabled'

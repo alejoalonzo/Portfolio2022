@@ -2,12 +2,12 @@
 <section class="aboutMe">
     <div class="aboutMeContainer">
         <div id="imgAbout">
-            <img data-aos="fade-up" data-aos-duration="1500" id="imgAbout1" src="../assets/media/about.jpg" alt="About">
-            <img data-aos="fade-down" data-aos-duration="1500" id="imgAbout2" src="../assets/media/74553037.jpeg"
+            <img data-aos="fade-up" data-aos-duration="1000" id="imgAbout1" src="../assets/media/about.jpg" alt="About">
+            <img data-aos="fade-down" data-aos-duration="1000" id="imgAbout2" src="../assets/media/74553037.jpeg"
                 alt="About">
 
         </div>
-        <div class="textAbout" data-aos="fade-left" data-aos-duration="3000">
+        <div class="textAbout" data-aos="fade-left" data-aos-duration="2000">
             <h3 class="titles">
                 Who's this guy
             </h3>
@@ -219,29 +219,35 @@
     </div>
     <div class="containerForm">
         <h3 class="titles" data-aos="fade-left" data-aos-duration="2000">My background</h3>
-        <span class="descriptionAbout  paddingRight200" data-aos="fade-left" data-aos-duration="3000">
+        <span class="descriptionAbout  paddingRight200" data-aos="fade-left" data-aos-duration="2000">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro velit nemo quia nulla deserunt similique
             eligendi hic. Qui, et nisi obcaecati numquam, modi consequuntur eos doloribus, minus beatae ipsam facilis!
         </span>
-        <span class="descriptionAbout marginTop50" data-aos="fade-left" data-aos-duration="3000">CFGS Web Applications
+        <span class="descriptionAbout marginTop50" data-aos="fade-left" data-aos-duration="2000">CFGS Web Applications
             Development</span>
-        <span class="descriptionAbout" data-aos="fade-left" data-aos-duration="3000">IFP (Barcelona, Spain.
+        <span class="descriptionAbout" data-aos="fade-left" data-aos-duration="2000">IFP (Barcelona, Spain.
             2020-2022)</span>
-        <span class="descriptionAbout marginTop50" data-aos="fade-left" data-aos-duration="3000">Bachelor's Degree in
+        <span class="descriptionAbout marginTop50" data-aos="fade-left" data-aos-duration="2000">Bachelor's Degree in
             Graphic Design</span>
-        <span class="descriptionAbout" data-aos="fade-left" data-aos-duration="3000">UES (El Salvador, 2006-2013)</span>
+        <span class="descriptionAbout" data-aos="fade-left" data-aos-duration="2000">UES (El Salvador, 2006-2013)</span>
     </div>
 </div>
 
 <!-- footer------------------------------------------------------------------------ -->
 <footer>
     <div class="footerTextContainer">
+        <div class="footerText animatedBAckToTop">
+            <a [routerLink]="['/about-me']">
+                <fa-icon [icon]="faArrowUp" class="socialIcons linkBGdark"></fa-icon>
+            </a>
+        </div>
         <div class="footerText">
-            Let's talk
-            Wanna get in touch or talk about a project?</div>
+            Wanna get in touch or talk about a project?
+        </div>
         <div class="footerText">
             Feel free to drop a line in the form at the
-            contact page.
+            <a [routerLink]="['/contact']" fragment="createProject" class="linkBGdark">contact page</a>.
         </div>
+
     </div>
 </footer>

@@ -88,12 +88,14 @@ a{
   text-decoration: none;
 }
 
+
 /*global colors*/
 $backgroundColorGlobalPrimary: #ffffff;
 $backgroundColorGlobalSecundary: #f4f4f6;
 $backgroundColorFormBox: #eeeef0;
 $backgroundColorDarkPrimary: #35373e;
 $backgroundColorDarkSecundary: #2d2f35;
+$backgroundColorDarkThird: #4d5159;
 $TextColorGlobalPrimary: #35373e;
 $TextColorGlobalSecundary: #acafba;
 $TextColorGlobalDarkBG: #ffffff;
@@ -108,42 +110,13 @@ $customBlue: #00ADB5;
 }
 /*Header-----------------------------------------------------------------------------*/
 
-/*efect Particles*/
-/*
-canvas{
-  background: black;
-  width: 100vw;
-  height: 100vh;
-}
-#copy{
-  width: 250px;
-  height: 40px;
-  line-height: 40px;
+#myVideo {
   position: absolute;
-  bottom: 35px;
-  left: calc(50% - 125px);
-  background: none;
-  color: white;
-  font-size: 30px;
-  font-family: arial;
-  text-align: center;
-  border: 1px solid white;
-
+  right: 0;
+  height: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
-
-p{
-position: fixed;
-left: 0;
-bottom:5px;
-color: #fff;
-z-index:10;
-font-size:16px;
-font-family: Helvetica, Verdana, sans-serif;
-opacity:0.5;
-width: 100%;
-text-align: center;
-margin: 0;
-}*/
 
 /*-------------------------------------------------*/
 
@@ -153,39 +126,48 @@ header {
   height: 1000px;
   display: flex;
   background-color: $backgroundColorDarkSecundary;
-  //background-image: url("./assets/media/bgMountans.jpg");
 }
 #squareTitle {
   margin: auto;
-  border: 5px solid $backgroundColorGlobalSecundary;
+  border: 5px solid $TextColorGlobalSecundary;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 }
 #title {
   font-family: $titleFont;
   font-weight: 500;
-  color: $backgroundColorGlobalSecundary;
+  color: $TextColorGlobalSecundary;
   font-size: 80px;
   text-align: center;
   line-height: 1em;
   text-transform: uppercase;
   margin: 70px 70px 10px 70px;
+  transition: all 1000ms ease;
+}
+#title:hover{
+  color: $backgroundColorGlobalSecundary;
 }
 #subTitle {
   color: $TextColorGlobalSecundary;
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 50px;
+  transition: all 1000ms ease;
+}
+#subTitle:hover{
+  color: $backgroundColorGlobalSecundary;
 }
 
 .scrollDown{
  margin: 700px 60px 0 60px;
  justify-content: end;
+ z-index: 3;
 }
 .scrollDown span{
   display: flex;
-  color: $TextColorGlobalSecundary;
+  color: $backgroundColorDarkThird;
   font-size: 1.3rem;
   writing-mode: vertical-lr;
   margin-bottom: 10px;
@@ -200,6 +182,17 @@ header {
   color: $customBlue;
 }
 
+@keyframes backToTop {
+  0% {
+ bottom: 20px;
+  }
+  50% {
+     bottom: 0px;
+  }
+  100% {
+     bottom: 20px;
+  }
+}
 @keyframes subTitle {
   0% {
  bottom: 50px;
@@ -224,11 +217,15 @@ header {
   align-items: center;
   z-index: 5;
 }
+.boxSideBars:hover fa-icon{
+ color: $customBlue;
+}
 #day {
   top: 400px;
   left: 0;
   border-right: 1px solid $TextColorGlobalSecundary;
   border-bottom: 1px solid $TextColorGlobalSecundary;
+  
 }
 
 #night {
@@ -260,6 +257,7 @@ header {
   color: $backgroundColorGlobalSecundary;
   margin: 0;
   font-size: 1.8rem;
+  transition: all 500ms ease;
 }
 
 /*------------------------------------------------Menu---------------------*/
@@ -274,7 +272,7 @@ nav {
   position: fixed;
   transition-property: top;
   transition-duration: 500ms;
-  z-index: 1;
+  z-index: 5;
 }
 nav ul {
   display: flex;
@@ -306,13 +304,13 @@ nav a:hover,
 footer {
   display: flex;
   width: 100%;
-  height: 250px;
+  height: 150px;
   background-color: $backgroundColorDarkSecundary;
   color: $TextColorGlobalSecundary;
   justify-content: center;
 }
 .footerTextContainer {
-  margin-top: 150px;
+  margin-top: 40px;
 }
 .footerText {
   font-family: $textFontGeneral;
@@ -320,6 +318,22 @@ footer {
   text-align: center;
   margin-top: 5px;
 }
+.linkBGdark{
+  text-decoration: none;
+  color: $customBlue;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+.linkBGdark:hover{
+  color: $backgroundColorGlobalPrimary;
+}
+.animatedBAckToTop{
+  position : relative;
+  animation-name: backToTop;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 
 /*------------------------------------------------About---------------------*/
 .aboutMe {
@@ -532,6 +546,7 @@ form textarea::placeholder {
 .submitForm {
   width: 45%;
 }
+
 form input[type="submit"],
 form button {
   margin-top: 15px;
@@ -544,11 +559,16 @@ form button {
   color: $TextColorGlobalSecundary;
   cursor: pointer;
   width: 100%;
+  transition: all 400ms ease;
 }
 
 form input[disabled] {
   opacity: 0.2;
   cursor: not-allowed;
+}
+form input[type="submit"]:hover {
+  color: $backgroundColorGlobalSecundary;
+  background-color: $customBlue;
 }
 
 .formError {
@@ -703,6 +723,10 @@ form input[disabled] {
     border-radius: 0 0 10px 0;
     color: $backgroundColorGlobalPrimary;
     cursor: pointer;
+   transition: all 400ms ease;
+ }
+ .tooltip .info button:hover{
+  background: $backgroundColorDarkPrimary;
  }
 
  .tooltip a{
@@ -822,6 +846,10 @@ form input[disabled] {
   text-decoration: none;
   color: $TextColorGlobalDarkBG;
 }
+.seeProjectLink:hover{
+  text-decoration: underline;
+}
+
 #butonProject {
   background-color: $backgroundColorDarkSecundary;
   color: $backgroundColorGlobalSecundary;
@@ -865,9 +893,14 @@ form input[disabled] {
   color: $backgroundColorGlobalSecundary;
   padding: 10px;
   cursor: pointer;
+  transition: all 400ms ease;
+
 }
 .bottonsProjecrtsDetail fa-icon {
   margin-right: 20px;
+}
+.bottonsGoBack:hover, .bottonsProjecrtsDetail button:hover{
+  background-color: $customBlue;
 }
 .bottonsGoBack{
   width: calc(96% + 3px);
@@ -878,6 +911,8 @@ form input[disabled] {
   margin-top: 3px;
   color: $backgroundColorGlobalPrimary;
   cursor: pointer;
+  transition: all 400ms ease;
+
 }
 .category {
   color: $TextColorGlobalSecundary;

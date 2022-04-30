@@ -1,20 +1,22 @@
-<!-- header---------------------------------------------------------------- -->
-<!-- <canvas id="scene" #scene></canvas>
-<input id="copy" #copy type="text" value="Ale" /> -->
+<video #video id="myVideo">
+  <source src="../assets/media/videoBG.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 <header id="header">
+
   <div class="scrollDown">
     <span>
       Scroll down
     </span>
     <fa-icon [icon]="faArrowDown"></fa-icon>
   </div>
-  <div data-aos="zoom-out" id="squareTitle">
-    <h1 id="title">
-      ale <br>
-      web <br>
-      dev
-    </h1>
-    <span id="subTitle">
+  <div id="squareTitle">
+    <section id="title" #titleNamed class="animate__animated animate__flipInX">
+      ALE<br>
+      WEB<br>
+      DEV<br>
+    </section>
+    <span id="subTitle" class="animate__animated animate__rubberBand">
       Hi there! I'm Alejandro. <br>I'm a web developer.
     </span>
   </div>
@@ -42,7 +44,7 @@
     </div>
   </a>
 </div>
-<div id="social" class="boxSideBars">
+<div id="social">
   <a href="https://www.linkedin.com/in/alejandro-alonzo-69639a38/" target="_blank" rel="noopener noreferrer">
     <div id="linkedin" class="boxSideBars">
       <fa-icon [icon]="faLinkedinIn" class="socialIcons"></fa-icon>
@@ -66,11 +68,12 @@
     <li id="homeBtnMenu"><a [routerLink]="['']" [routerLinkActive]="['actived']">ALE</a></li>
     <li><a [routerLink]="['/about-me']" fragment="aboutMe" [routerLinkActive]="['actived']">ABOUT</a></li>
     <li><a [routerLink]="['/projects']" fragment="projectsTitle" [routerLinkActive]="['actived']">PROJECTS</a></li>
-    <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">CREATE</a></li>
+    <!-- <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">CREATE</a></li> -->
     <li><a [routerLink]="['/contact']" fragment="createProject" [routerLinkActive]="['actived']">CONTACT</a></li>
+    <li><a href="/assets/media/ManuelAlejandroCV.pdf" [routerLinkActive]="['actived']" target="blank">RESUME</a></li>
   </ul>
 </nav>
-
+<!-- class="animate__animated animate__flipInX" -->
 <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
 <!-- <fa-icon [icon]="faFolderOpen"></fa-icon> -->
 
