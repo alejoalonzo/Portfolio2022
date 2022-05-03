@@ -17,7 +17,9 @@
       DEV<br>
     </section>
     <span id="subTitle" class="animate__animated animate__rubberBand">
-      Hi there! I'm Alejandro. <br>I'm a web developer.
+      Hi there! I'm Alejandro <br>I'm a web developer.
+      <br><a [routerLink]="['/projects']" fragment="projectsTitle"><span class="linkBGdark">View my work <fa-icon
+            [icon]="faArrowRight"></fa-icon></span></a>
     </span>
   </div>
   <div class="scrollDown">
@@ -72,6 +74,9 @@
     <li><a [routerLink]="['/contact']" fragment="createProject" [routerLinkActive]="['actived']">CONTACT</a></li>
     <li><a href="/assets/media/ManuelAlejandroCV.pdf" [routerLinkActive]="['actived']" target="blank">RESUME</a></li>
   </ul>
+  <div class="hide">
+    <fa-icon [icon]="faBars"></fa-icon>
+  </div>
 </nav>
 <!-- class="animate__animated animate__flipInX" -->
 <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->

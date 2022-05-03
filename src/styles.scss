@@ -100,6 +100,7 @@ $TextColorGlobalPrimary: #35373e;
 $TextColorGlobalSecundary: #acafba;
 $TextColorGlobalDarkBG: #ffffff;
 $customBlue: #00ADB5;
+$errorRed: rgba(255, 0, 0, 0.705);
 
 .dark-img {
   filter: brightness(100%);
@@ -123,7 +124,7 @@ $customBlue: #00ADB5;
 
 header {
   width: 100%;
-  height: 1000px;
+  height: 900px;
   display: flex;
   background-color: $backgroundColorDarkSecundary;
 }
@@ -300,6 +301,13 @@ nav a:hover,
 .actived {
   border: 2px solid $customBlue;
 }
+.hide{
+  color: $TextColorGlobalSecundary;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+  display: none;
+}
 /*****************************************Footer******************************/
 footer {
   display: flex;
@@ -326,6 +334,15 @@ footer {
 }
 .linkBGdark:hover{
   color: $backgroundColorGlobalPrimary;
+}
+.linkBGwhite{
+  text-decoration: none;
+  color: $customBlue;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+.linkBGwhite:hover{
+  color: $backgroundColorDarkPrimary;
 }
 .animatedBAckToTop{
   position : relative;
@@ -381,6 +398,7 @@ footer {
 .descriptionAbout {
   color: $TextColorGlobalSecundary;
   line-height: 1.3em;
+  margin-right: 200px;
 }
 .paddingRight200{
   padding-right: 200px;
@@ -464,7 +482,10 @@ transform: translateX(0);
 .containerForm {
   width: 50%;
 }
-
+.textRequirmentsForm{
+  color: $TextColorGlobalSecundary;
+  padding: 0 0 10px 20px;
+}
 /*FORM*/
 .containerForm {
   display: flex;
@@ -572,10 +593,13 @@ form input[type="submit"]:hover {
 }
 
 .formError {
-  color: rgba(255, 0, 0, 0.705);
+  color: $errorRed;
   font-family: $textFontGeneral;
   font-size: 2rem;
   margin: 5px;
+}
+.red{
+  color: $errorRed;
 }
 .visibilityTransparent {
   visibility: hidden;
@@ -930,12 +954,24 @@ form input[type="submit"]:hover {
 
 /******************************MEDIA QUERIES****************************************/
 
+/*DESKTOP*/
+@media (max-width: 1910px){
+  header{
+    height: 850px;
+  }
+  #myVideo{
+    min-height: 110%;
+  }
+
+}
+
+
 /*LAPTOP*/
 
 /*--------------------------------------header--------*/
 @media (max-width: 1550px){
   header{
-    height: 750px;
+    height: 720px;
   }
   
   #day {
@@ -995,4 +1031,107 @@ form input[type="submit"]:hover {
       height: 750px;
   }
 
+}
+
+/*tablet*/
+@media (max-width: 1080px){
+  header{
+    height: 720px;
+  }
+  #myVideo{
+    min-height: 77%;
+  }
+
+}
+
+
+/*mobile*/
+@media (max-width: 845px){
+  //header-----------
+  header{
+    height: 625px;
+  }
+  #myVideo{
+    min-height: 73%;
+  }
+  .scrollDown{
+    display: none;
+  }
+  nav {
+    height: auto;
+  }
+  nav ul {
+    display: none;
+    justify-content: normal;
+    width: 100%;
+    flex-direction: column;
+    margin: 20px 0 0 20px;
+  }
+  .hide{
+    display: flex;
+    padding: 25px 25px 0 25px;
+  }
+
+  //about me----------
+  .aboutMeContainer{
+    flex-wrap: inherit;
+    width: 95%;
+    flex-direction: column;
+  }
+  .descriptionAbout {
+    margin-right: 20px;
+    margin-left: 5px;
+  }
+  #imgAbout{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #imgAbout1{
+    margin: 5px;
+  }
+  .textAbout{
+    width: 75%;
+  }
+  .containerTitle h2 {
+    margin-top: 30px;
+  }
+  #imgCreateProject {
+    width: 100%;
+  }
+  #createProject {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  #tilleImgCreateProject{
+    margin: 20px;
+  }
+ 
+  .containerForm {
+    width: 100%;
+  }
+  .titles{
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  footer{
+    height: 175px;
+  }
+  .footerText {
+    padding: 0 25px;
+  }
+  //projects-----------
+  .containerTitle span {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .projectView {
+    width: 100%;
+    height: auto;
+  }
+  //contact-------------
+  .textRequirmentsForm{
+      padding: 0 0 10px 0px;
+  }
 }

@@ -1,7 +1,7 @@
 import * as AOS from 'aos';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { faGithub, faLinkedinIn, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faCoffee, faFolderOpen, faMailBulk, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faBars, faCoffee, faFolderOpen, faMailBulk, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 //------
 
@@ -23,8 +23,10 @@ export class AppComponent {
   faSun = faSun;
   faMoon = faMoon;
   faArrowDown = faArrowDown;
+  faArrowRight = faArrowRight;
   faWhatsapp = faWhatsapp;
   faMailBulk = faMailBulk;
+  faBars = faBars;
   
   public titleName: String;
   public titleArea!: String;

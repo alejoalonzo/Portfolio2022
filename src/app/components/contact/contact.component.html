@@ -28,8 +28,10 @@
     </div>
 
     <div class="containerForm">
-        <h2 data-aos="fade-left" data-aos-duration="2000">{{title}}</h2>
-
+        <h3 class="titles" data-aos="fade-left" data-aos-duration="2000">{{title}}</h3>
+        <span class="textRequirmentsForm">
+            Fill in the required fields (<span class="red">*</span>) to unlock the submit button
+        </span>
         <form #contactForm="ngForm" (ngSubmit)="onSubmitContact(contactForm)">
             <span>
                 <input type="text" name="name" #name="ngModel" [(ngModel)]="contact.name" placeholder="Name" required
