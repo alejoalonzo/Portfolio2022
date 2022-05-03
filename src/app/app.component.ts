@@ -3,8 +3,9 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { faGithub, faLinkedinIn, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight, faBars, faCoffee, faFolderOpen, faMailBulk, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-//------
 
+//------
+declare let $: any;
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,8 @@ export class AppComponent {
   public titleName: String;
   public titleArea!: String;
   public titleJob!: String;
+
+  isShown: boolean = false ; // hidden by default
   
 
   //efecto------------------
@@ -46,6 +49,8 @@ export class AppComponent {
   @ViewChild("video", { static: true, read: ElementRef })
   video!: ElementRef;
 
+  //@ViewChild('hide') hide!: ElementRef
+
   constructor(){ 
    
     this.titleName= 'ALE';
@@ -56,6 +61,9 @@ export class AppComponent {
   ngOnInit(): void {
     AOS.init(); 
   
+    $(".hide").on('click', function(){
+      $("nav ul").toggle('slow');
+    })
  
     // -----------------------------------------------------NAVBAR-------------------
     var posAnteriorScrol = document.documentElement.scrollTop;
@@ -80,6 +88,15 @@ export class AppComponent {
     
   }
   
+  toggleShow() {
+    this.isShown = ! this.isShown;  
+  }
+  /*
+  showHideNav(){
+    var hide = this.hide.nativeElement;
+    hide.classList.toggleShow(this.navbar);
+  }
+  */
 //WORKS
 /*
   textShwow(){

@@ -681,7 +681,7 @@ form input[type="submit"]:hover {
   border-radius: 10px;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, .30);
   width: 31.25em;
-  z-index: 10;
+  z-index: 3;
   opacity: 0;
   transition: 400ms ease all;
   transform: translateY(10px);
@@ -1067,6 +1067,9 @@ form input[type="submit"]:hover {
     flex-direction: column;
     margin: 20px 0 0 20px;
   }
+  nav li {
+    margin: 20px;
+  }
   .hide{
     display: flex;
     padding: 25px 25px 0 25px;
@@ -1133,5 +1136,23 @@ form input[type="submit"]:hover {
   //contact-------------
   .textRequirmentsForm{
       padding: 0 0 10px 0px;
+  }
+  .tooltip{
+    width: 100%;
+    position: static;
+    opacity: 1;
+  }
+  #faMapMarkerAlt{
+    display: none;
+  }
+  .radar{
+    display: none;
+  }
+  #imgContactProject{
+    width: 100%;
+  }
+  .tooltip::after{
+    content: "";
+    display: none;
   }
 }
