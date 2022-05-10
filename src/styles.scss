@@ -1047,12 +1047,16 @@ form input[type="submit"]:hover {
 
 /*mobile*/
 @media (max-width: 845px){
+
+  html, body {
+    overflow-x: hidden;
+  }
   //header-----------
   header{
     height: 625px;
   }
   #myVideo{
-    min-height: 73%;
+    min-height: 80%;
   }
   .scrollDown{
     display: none;
@@ -1094,6 +1098,7 @@ form input[type="submit"]:hover {
   }
   .textAbout{
     width: 75%;
+    margin-top: 25px;
   }
   .containerTitle h2 {
     margin-top: 30px;
@@ -1132,6 +1137,27 @@ form input[type="submit"]:hover {
   .projectView {
     width: 100%;
     height: auto;
+  }
+  #projectsTitle{
+    margin-top: 125px;
+  }
+  .squreTextPorfolio{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+  }
+
+  //detail---------------
+  .aboutMe {
+    height: auto;
+    padding: 50px 0px;
+  }
+  .imgeLeftMedium{
+    width: 100%;
+    margin: 0px!important;
+    margin-bottom: 25px;
   }
   //contact-------------
   .textRequirmentsForm{
