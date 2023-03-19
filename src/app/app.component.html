@@ -1,35 +1,37 @@
-<video #video id="myVideo">
-  <source src="../assets/media/videoBG.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-<header id="header">
+<ng-container *ngIf="!isHomePage">
+  <video #video id="myVideo">
+    <source src="../assets/media/videoBG.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <header id="header">
 
-  <div class="scrollDown">
-    <span>
-      Scroll down
-    </span>
-    <fa-icon [icon]="faArrowDown"></fa-icon>
-  </div>
-  <div id="squareTitle">
-    <section id="title" #titleNamed class="animate__animated animate__flipInX">
-      ALE<br>
-      WEB<br>
-      DEV<br>
-    </section>
-    <span id="subTitle" class="animate__animated animate__rubberBand">
-      Hi there! I'm Alejandro <br>I'm a web developer.
-      <br><a [routerLink]="['/projects']" fragment="projectsTitle"><span class="linkBGdark">View my work <fa-icon
-            [icon]="faArrowRight"></fa-icon></span></a>
-    </span>
-  </div>
-  <div class="scrollDown">
-    <span>
-      Scroll down
-    </span>
-    <fa-icon [icon]="faArrowDown"></fa-icon>
-  </div>
+    <div class="scrollDown">
+      <span>
+        Scroll down
+      </span>
+      <fa-icon [icon]="faArrowDown"></fa-icon>
+    </div>
+    <div id="squareTitle">
+      <section id="title" #titleNamed class="animate__animated animate__flipInX">
+        ALE<br>
+        WEB<br>
+        DEV<br>
+      </section>
+      <span id="subTitle" class="animate__animated animate__rubberBand">
+        Hi there! I'm Alejandro <br>I'm a web developer.
+        <br><a [routerLink]="['/projects']" fragment="projectsTitle"><span class="linkBGdark">View my work <fa-icon
+              [icon]="faArrowRight"></fa-icon></span></a>
+      </span>
+    </div>
+    <div class="scrollDown">
+      <span>
+        Scroll down
+      </span>
+      <fa-icon [icon]="faArrowDown"></fa-icon>
+    </div>
+  </header>
+</ng-container>
 
-</header>
 
 
 <!-- sideBars ------------------------------------------------------------------------>

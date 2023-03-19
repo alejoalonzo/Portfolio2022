@@ -16,6 +16,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
+import { ParticleAnimationComponent } from './components/particle-animation/particle-animation.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -33,7 +34,8 @@ const routerOptions: ExtraOptions = {
     AboutComponent,
     ErrorComponent,
     DetailComponent,
-    EditComponent
+    EditComponent,
+    ParticleAnimationComponent
     
   ],
   imports: [

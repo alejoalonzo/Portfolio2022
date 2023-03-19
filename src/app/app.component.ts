@@ -3,6 +3,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { faGithub, faLinkedinIn, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight, faBars, faCoffee, faFolderOpen, faMailBulk, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { Router, NavigationEnd } from '@angular/router';
 
 //------
 declare let $: any;
@@ -37,8 +38,6 @@ export class AppComponent {
   
 
   //efecto------------------
-  @ViewChild('scene') scene!: ElementRef;
-  @ViewChild('copy') copy: any;
   @ViewChild('titleNamed') titleNamed!: ElementRef;
   @ViewChild('navbar')
   navbar!: ElementRef;
@@ -50,8 +49,9 @@ export class AppComponent {
   video!: ElementRef;
 
   //@ViewChild('hide') hide!: ElementRef
+  isHomePage = false;
 
-  constructor(){ 
+  constructor(private router: Router){ 
    
     this.titleName= 'ALE';
     this.titleArea= 'WEB';
@@ -59,6 +59,12 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isHomePage = this.router.url === '/';
+      }
+    });
+
     AOS.init(); 
   
     $(".hide").on('click', function(){
@@ -91,30 +97,6 @@ export class AppComponent {
   toggleShow() {
     this.isShown = ! this.isShown;  
   }
-  /*
-  showHideNav(){
-    var hide = this.hide.nativeElement;
-    hide.classList.toggleShow(this.navbar);
-  }
-  */
-//WORKS
-/*
-  textShwow(){
-    var texttitleNamed=this.titleNamed.nativeElement;
-     const writing = (str:any)=>{
-      let arrFromStr = str.split('');
-      let i = 0;
-  
-      let printStr = setInterval(function(){
-        texttitleNamed.innerHTML += arrFromStr[i];
-        i++;
-        if(i===arrFromStr.length){
-          clearInterval(printStr);
-         
-        }
-        }, 300);
-      };
-      writing(this.titleName);
-  }*/
+
   
 }

@@ -37,6 +37,30 @@ body {
   margin: 0px;
   overflow-x: hidden;
 }
+/*global colors*/
+$backgroundColorGlobalPrimary: #ffffff;
+$backgroundColorGlobalSecundary: #f4f4f6;
+$backgroundColorFormBox: #eeeef0;
+$backgroundColorDarkPrimary: #35373e;
+$backgroundColorDarkSecundary: #2d2f35;
+$backgroundColorDarkThird: #4d5159;
+$TextColorGlobalPrimary: #35373e;
+$TextColorGlobalSecundary: #acafba;
+$TextColorGlobalDarkBG: #ffffff;
+$customBlue: #00ADB5;
+$errorRed: rgba(255, 0, 0, 0.705);
+.dark-img {
+  filter: brightness(100%);
+}
+.dark-img:hover {
+  filter: brightness(20%); //mas oscura
+  transition: all 400ms;
+}
+canvas{
+  background: $TextColorGlobalPrimary;
+  width: 100vw;
+  height: 100vh;
+}
 .displayNone {
   display: none;
 }
@@ -88,27 +112,6 @@ a{
   text-decoration: none;
 }
 
-
-/*global colors*/
-$backgroundColorGlobalPrimary: #ffffff;
-$backgroundColorGlobalSecundary: #f4f4f6;
-$backgroundColorFormBox: #eeeef0;
-$backgroundColorDarkPrimary: #35373e;
-$backgroundColorDarkSecundary: #2d2f35;
-$backgroundColorDarkThird: #4d5159;
-$TextColorGlobalPrimary: #35373e;
-$TextColorGlobalSecundary: #acafba;
-$TextColorGlobalDarkBG: #ffffff;
-$customBlue: #00ADB5;
-$errorRed: rgba(255, 0, 0, 0.705);
-
-.dark-img {
-  filter: brightness(100%);
-}
-.dark-img:hover {
-  filter: brightness(20%); //mas oscura
-  transition: all 400ms;
-}
 /*Header-----------------------------------------------------------------------------*/
 
 #myVideo {
