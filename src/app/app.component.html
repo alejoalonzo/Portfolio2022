@@ -5,7 +5,7 @@
   </video>
   <header id="header">
 
-    <div class="scrollDown">
+    <div class="scrollDownHomeLeft">
       <span>
         Scroll down
       </span>
@@ -23,7 +23,7 @@
               [icon]="faArrowRight"></fa-icon></span></a>
       </span>
     </div>
-    <div class="scrollDown">
+    <div class="scrollDownHomeRight">
       <span>
         Scroll down
       </span>
@@ -42,7 +42,7 @@
       <fa-icon [icon]="faWhatsapp" class="socialIcons"></fa-icon>
     </div>
   </a>
-  <a href="mailto:info@alejandroalonzo.com" target="_blank" rel="noopener noreferrer">
+  <a href="mailto:alejandro.12w@gmail.com" target="_blank" rel="noopener noreferrer">
     <div id="night" class="boxSideBars">
       <fa-icon [icon]="faMailBulk" class="socialIcons"></fa-icon>
     </div>
@@ -54,11 +54,11 @@
       <fa-icon [icon]="faLinkedinIn" class="socialIcons"></fa-icon>
     </div>
   </a>
-  <a href="https://www.youtube.com/channel/UCFt69MxS_7dK54ii5yQoNEA" target="_blank" rel="noopener noreferrer">
+  <!-- <a href="https://www.youtube.com/channel/UCFt69MxS_7dK54ii5yQoNEA" target="_blank" rel="noopener noreferrer">
     <div id="youtube" class="boxSideBars">
       <fa-icon [icon]="faYoutube" class="socialIcons"></fa-icon>
     </div>
-  </a>
+  </a> -->
   <a href="https://github.com/alejoalonzo" target="_blank" rel="noopener noreferrer">
     <div id="github" class="boxSideBars">
       <fa-icon [icon]="faGitHub" class="socialIcons"></fa-icon>
@@ -68,8 +68,10 @@
 
 <!-- navbar------------------------------------------------------------------------ -->
 <nav #navbar>
-  <ul>
-    <li id="homeBtnMenu"><a [routerLink]="['']" [routerLinkActive]="['actived']">ALE</a></li>
+  <ul id="homeBtnMenu">
+    <li><a [routerLink]="['']" [routerLinkActive]="['actived']">ALE</a></li>
+  </ul>
+  <ul id="btnsMenu">
     <li><a [routerLink]="['/about-me']" fragment="aboutMe" [routerLinkActive]="['actived']">ABOUT</a></li>
     <li><a [routerLink]="['/projects']" fragment="projectsTitle" [routerLinkActive]="['actived']">PROJECTS</a></li>
     <!-- <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">CREATE</a></li> -->
@@ -79,18 +81,5 @@
   <div class="hide">
     <fa-icon [icon]="faBars"></fa-icon>
   </div>
-  <!-- <div #hide class="hide" (clik)="toggleShow()">
-    <fa-icon [icon]="faBars"></fa-icon>
-  </div> -->
-  <!-- <button class="hide" (click)="toggleShow()" type="checkbox">
-    <fa-icon [icon]="faBars"></fa-icon>
-  </button>
-  <div *ngIf="isShown" class="row container-fluid" id="divshow">
-    divContente
-  </div> -->
 </nav>
-<!-- class="animate__animated animate__flipInX" -->
-<!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
-<!-- <fa-icon [icon]="faFolderOpen"></fa-icon> -->
-
 <router-outlet></router-outlet>

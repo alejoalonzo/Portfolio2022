@@ -14,7 +14,6 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
   ngAfterViewInit() {
     var canvas = this.canvasRef.nativeElement;
     var copy = this.canvasRef.nativeElement;
-    // var copy = document.querySelector("#copy");
     var ctx = canvas.getContext("2d");
   
     interface Mouse {
@@ -46,6 +45,7 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
         color: string;
       }
       
+      //const colors: string[] = ["#08D9D6", "#FF2E63", "#00ADB5", "#EAEAEA", "#EEEEEE"];
       const colors: string[] = ["#08D9D6", "#FF2E63", "#00ADB5", "#EAEAEA", "#EEEEEE"];
       
       class Particle {
@@ -128,12 +128,11 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        ctx.font = "bold " + ww / 10 + "px sans-serif";
+        ctx.font = "bold " + ww / 10 + "px Helvetica";//sans-serif
         ctx.textAlign = "center";
-        // ctx.fillText(copy.value, ww / 2, wh / 2);
-        ctx.fillText("ALE", ww / 2, wh / 2 - ww / 12);
+        ctx.fillText("ALE", ww / 2, wh / 2 - ww / 13);
         ctx.fillText("WEB", ww / 2, wh / 2);
-        ctx.fillText("DEV", ww / 2, wh / 2 + ww / 12);
+        ctx.fillText("DEV", ww / 2, wh / 2 + ww / 13);
 
         var data = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
