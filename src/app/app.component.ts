@@ -59,6 +59,39 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
+    //cursor effect---------------------------------------------------------------
+    const cursor = document.querySelector(".cursor") as HTMLElement;
+    const cursor2 = document.querySelector(".cursor2") as HTMLElement;
+    
+    // set the initial opacity of the cursor elements to 0
+    cursor.style.opacity = cursor2.style.opacity = "0";
+    
+    document.addEventListener("mousemove", (e) => {
+      // check if the mouse pointer is inside the viewport
+      if (e.clientX >= 0 && e.clientX <= window.innerWidth && e.clientY >= 0 && e.clientY <= window.innerHeight) {
+        // set a delay for the movement of cursor
+        setTimeout(() => {
+          cursor.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px; opacity: 1;`;
+        }, 50); // adjust the delay time (in milliseconds) as needed
+        
+        cursor2.style.cssText = `left: ${e.clientX}px; top: ${e.clientY}px; opacity: 1;`;
+      }
+    });
+    
+    // add a "mouseleave" event listener to hide the cursor elements
+    document.body.addEventListener("mouseleave", (e) => {
+      cursor.style.opacity = "0";
+      cursor2.style.opacity = "0";
+    });
+
+    // add an "if" statement to check if cursor2 is at opacity 0, and if so, set cursor to opacity 0 as well
+    setInterval(() => {
+      if (cursor2.style.opacity === "0") {
+        cursor.style.opacity = "0";
+      }
+    }, 50);
+    //-------------------------------------------------------------------------------
+    //hide header from home
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.isHomePage = this.router.url === '/';

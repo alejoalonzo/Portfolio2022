@@ -132,7 +132,7 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
         ctx.textAlign = "center";
         ctx.fillText("ALE", ww / 2, wh / 2 - ww / 13);
         ctx.fillText("WEB", ww / 2, wh / 2);
-        ctx.fillText("DEV", ww / 2, wh / 2 + ww / 13);
+        // ctx.fillText("DEV", ww / 2, wh / 2 + ww / 13);
 
         var data = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
