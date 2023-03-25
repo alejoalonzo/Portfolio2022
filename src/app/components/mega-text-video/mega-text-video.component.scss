@@ -1,0 +1,52 @@
+@font-face {
+  font-family: IMPACT;
+  src:url("../../../fonts/IMPACT.TTF");
+}
+
+body {
+  background: white;
+  margin: 0;
+}
+
+header { 
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%;
+}
+
+header video { 
+  width: 100%;
+}
+
+svg { 
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0; // needed for FF, Safari, Edge
+  height: 100%;
+}
+
+svg text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 4.5em;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+svg rect {
+  fill: white;
+}
+
+svg > rect {
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+  fill: #35373e;
+}
+
+svg > text {
+  fill: black;
+  width: 100%;
+}

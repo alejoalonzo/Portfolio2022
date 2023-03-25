@@ -120,12 +120,13 @@ export class AppComponent {
         //document.getElementById("navbar").style.top = "-100px"
         posAnteriorScrol = posActualScrol;
     }
-
-    this.video.nativeElement.autoplay = true;
-    this.video.nativeElement.muted = true;
-    this.video.nativeElement.loop = true;
-    
+  
+      // setTimeout(() => {
+      //   this.video.nativeElement.play();
+      // }, 5000);
+ 
   }
+
   
   toggleShow() {
     this.isShown = ! this.isShown;  
@@ -133,3 +134,4 @@ export class AppComponent {
 
   
 }
+

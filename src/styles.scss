@@ -2,6 +2,13 @@
 
 /*Fonts*/
 @font-face {
+  font-family: "IMPACT";
+  src: url("./fonts/IMPACT.ttf");
+}
+$titleImpactFont: "IMPACT";
+
+
+@font-face {
   font-family: "Jaapokki-Regular";
   src: url("./fonts/Jaapokki-Regular.otf");
 }
@@ -259,22 +266,7 @@ header {
 }
 
 /*---------header2--------------*/
-.containerHero2{
-  display: flex;
 
-}
-.titleHome1{
-
-}
-.titleHome2{
-  font-family: $titleFont;
-  font-size: 1.5em;
-  color: $TextColorGlobalSecundary;
-  justify-content: center;
-}
-.titleHome3{
-
-}
 /*---------------------------------sideBars-------------------------------------*/
 .boxSideBars {
   position: fixed;

@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 import { ParticleAnimationComponent } from './components/particle-animation/particle-animation.component';
+import { MegaTextVideoComponent } from './components/mega-text-video/mega-text-video.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -35,7 +36,8 @@ const routerOptions: ExtraOptions = {
     ErrorComponent,
     DetailComponent,
     EditComponent,
-    ParticleAnimationComponent
+    ParticleAnimationComponent,
+    MegaTextVideoComponent
     
   ],
   imports: [
