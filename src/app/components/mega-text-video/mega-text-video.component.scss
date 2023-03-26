@@ -3,6 +3,17 @@
   src:url("../../../fonts/IMPACT.TTF");
 }
 
+@font-face {
+  font-family: "MavenPro-Regular";
+  src: url("../../../fonts/MavenPro-Regular.ttf");
+}
+$textFontGeneral: "MavenPro-Regular";
+$backGroundColorDark : #35373e;
+$TextColorGlobalSecundary: #acafba;
+
+*{
+  box-sizing: border-box;
+}
 body {
   background: white;
   margin: 0;
@@ -13,6 +24,8 @@ header {
   margin: 0 auto;
   position: relative;
   max-width: 100%;
+  
+  // overflow: hidden;
 }
 
 header video { 
@@ -34,6 +47,7 @@ svg text {
   font-size: 4.5em;
   letter-spacing: -2px;
   text-align: center;
+
 }
 
 svg rect {
@@ -43,10 +57,44 @@ svg rect {
 svg > rect {
   -webkit-mask: url(#mask);
   mask: url(#mask);
-  fill: #35373e;
+  fill: $backGroundColorDark;
 }
 
 svg > text {
   fill: black;
   width: 100%;
+}
+
+#header-text {
+  transform-origin: center center;
+  transition: transform 0.5s ease-out;
+}
+
+.containerSubTitleProjectWord{
+  display: flex;
+  width: 100%;
+  background-color: $backGroundColorDark;
+}
+.subTitleProjectWord{
+  font-family: $textFontGeneral;
+  margin-left: 5%;
+  color: $TextColorGlobalSecundary;
+  position: relative;
+  top: 160px;
+  z-index: 2;
+}
+.containerSubTitleProjectWord2{
+  display: flex;
+  width: 100%;
+  background-color: $backGroundColorDark;  
+  justify-content: end;
+}
+.subTitleProjectWord2{
+  font-family: $textFontGeneral;
+  color: $TextColorGlobalSecundary;
+
+  position: relative;
+  bottom: 50px;
+  right: 5%;
+  z-index: 2;
 }

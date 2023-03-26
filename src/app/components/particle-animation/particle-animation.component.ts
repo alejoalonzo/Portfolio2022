@@ -46,7 +46,7 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
       }
       
       //const colors: string[] = ["#08D9D6", "#FF2E63", "#00ADB5", "#EAEAEA", "#EEEEEE"];
-      const colors: string[] = ["#08D9D6", "#FF2E63", "#00ADB5", "#EAEAEA", "#EEEEEE"];
+      const colors: string[] = ["#08D9D6",  "#00ADB5", "#EAEAEA", "#EEEEEE"];
       
       class Particle {
         x: number;

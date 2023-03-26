@@ -18,6 +18,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 import { ParticleAnimationComponent } from './components/particle-animation/particle-animation.component';
 import { MegaTextVideoComponent } from './components/mega-text-video/mega-text-video.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -37,7 +38,8 @@ const routerOptions: ExtraOptions = {
     DetailComponent,
     EditComponent,
     ParticleAnimationComponent,
-    MegaTextVideoComponent
+    MegaTextVideoComponent,
+    ChatComponent
     
   ],
   imports: [

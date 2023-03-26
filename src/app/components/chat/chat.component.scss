@@ -1,0 +1,33 @@
+$primary: #00ADB5;
+$danger: #FF2E63;
+$backgroundColorGlobalPrimary: #ffffff;
+$backgroundColorGlobalSecundary: #f4f4f6;
+$backgroundColorFormBox: #eeeef0;
+$backgroundColorDarkPrimary: #35373e;
+$backgroundColorDarkSecundary: #2d2f35;
+$backgroundColorDarkThird: #4d5159;
+$TextColorGlobalPrimary: #35373e;
+$TextColorGlobalSecundary: #acafba;
+
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
+.my-chatGPT{
+    background-color: $backgroundColorDarkPrimary;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.subtitleItalic{
+    font-size: medium;
+    color: $TextColorGlobalSecundary;
+}
+.card-header{
+    color: $backgroundColorGlobalSecundary;
+    margin-top: 200px;
+}
+.my-input{
+    background-color: $TextColorGlobalSecundary;
+    color: $backgroundColorDarkSecundary;
+}

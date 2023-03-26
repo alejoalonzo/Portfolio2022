@@ -518,6 +518,9 @@ transform: translateX(0);
   height: 55px;
   margin: 0 20px;
 }
+.slider:hover .sliderTrack {
+  animation-play-state: paused;
+}
 
 
 /*------------------------------------------------Projects---------------------*/

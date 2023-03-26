@@ -110,6 +110,9 @@ export class AppComponent {
     window.onscroll = function(){
         esconderMostrarMenu()
     };
+    const hideMenuByDefoult = () =>{
+      this.navbar.nativeElement.style.display= "none";
+    }
     const esconderMostrarMenu = () =>{
       var posActualScrol = document.documentElement.scrollTop;
       if(posAnteriorScrol>posActualScrol){
