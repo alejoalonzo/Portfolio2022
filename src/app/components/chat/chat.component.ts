@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { ProjectService } from 'src/app/services/project.service';
+import { ChatGPTService } from '../../services/chatGPTservice';
 
 @Component({
   selector: 'app-chat',
@@ -7,7 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  message!:string;
+
+  constructor(
+    private chatgptSvc: ChatGPTService
+  ) { }
+
+  sendMessage(){
+    this.chatgptSvc.getDataFromOpenAI(this.message);
+    this.message='';
+  }
+
+  clearMessage(){
+    location.reload();
+  }
 
   ngOnInit(): void {
   }

@@ -14,7 +14,7 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
   ngAfterViewInit() {
     var canvas = this.canvasRef.nativeElement;
     var copy = this.canvasRef.nativeElement;
-    var ctx = canvas.getContext("2d");
+    var ctx = canvas.getContext('2d', { willReadFrequently: true })!;
   
     interface Mouse {
       x: number;

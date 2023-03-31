@@ -17,7 +17,7 @@
 
 
 <!-- about------------------------------------------------------------------------ -->
-<section class="aboutMe">
+<section id="aboutMe" #aboutMe class="aboutMe">
     <div class="aboutMeContainer">
         <div id="imgAbout">
             <img data-aos="fade-up" data-aos-duration="1000" id="imgAbout1" src="../assets/media/about.jpg" alt="About">
@@ -263,22 +263,4 @@
         </span>
     </div>
 </div>
-
-<!-- footer------------------------------------------------------------------------ -->
-<footer>
-    <div class="footerTextContainer">
-        <div class="footerText animatedBAckToTop">
-            <a [routerLink]="['/about-me']">
-                <fa-icon [icon]="faArrowUp" class="socialIcons linkBGdark"></fa-icon>
-            </a>
-        </div>
-        <div class="footerText">
-            Wanna get in touch or talk about a project?
-        </div>
-        <div class="footerText">
-            Feel free to drop a line in the form at the
-            <a [routerLink]="['/contact']" fragment="createProject" class="linkBGdark">contact page</a>.
-        </div>
-
-    </div>
-</footer>
+<app-footer></app-footer>

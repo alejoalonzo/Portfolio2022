@@ -1,3 +1,4 @@
+<app-header [title]="'CHAT BOT'"></app-header>
 <div class="my-chatGPT">
     <div class="container ">
         <div class="card">
@@ -7,14 +8,16 @@
             <div class="card-body">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 response">
                         </div>
                     </div>
                 </div>
-                <input type="text" class="form-control my-input" name="messages" placeholder="Ask me anything...">
-                <button class="btn btn-outline-primary mt-2 mr-2">Submit</button>
-                <button class="btn btn-outline-danger mt-2 mr-2">Clear</button>
+                <input [(ngModel)]="message" type="text" class="form-control my-input" name="messages"
+                    placeholder="Ask me anything...">
+                <button class="btn btn-outline-primary mt-2 mr-2" (click)="sendMessage()">Submit</button>
+                <button class="btn btn-outline-danger mt-2 mr-2" (click)="clearMessage()">Clear</button>
             </div>
         </div>
     </div>
 </div>
+<app-footer></app-footer>

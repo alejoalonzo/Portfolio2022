@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders } from "@angular/common/http"
 import { Observable } from "rxjs";
 import { Project } from "../models/project";
 import { Global } from "./global";
-import { Content } from "@angular/compiler/src/render3/r3_ast";
 import { Contact } from "../models/contact";
+
 
 @Injectable()
 export class ProjectService{
@@ -14,9 +14,13 @@ export class ProjectService{
     ){
         this.url = Global.url;
     }
+
+
     testsService(){
         return 'Probando la api de Angular'
     }
+
+
     saveContact (contact: Contact): Observable<any>{
         let params = JSON.stringify(contact);
         let headers = new HttpHeaders().set('Content-type', 'application/json');

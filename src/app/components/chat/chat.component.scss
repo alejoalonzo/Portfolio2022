@@ -31,3 +31,9 @@ $TextColorGlobalSecundary: #acafba;
     background-color: $TextColorGlobalSecundary;
     color: $backgroundColorDarkSecundary;
 }
+.response{
+    background-color: $backgroundColorGlobalPrimary;
+    color: $backgroundColorDarkThird;
+    list-style: none;
+    padding-top: 10px;
+}

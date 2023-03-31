@@ -45,14 +45,11 @@ export class AppComponent {
   srt: any;
   arrFromStr!: string[];
 
-  @ViewChild("video", { static: true, read: ElementRef })
-  video!: ElementRef;
-
   //@ViewChild('hide') hide!: ElementRef
   isHomePage = false;
 
   constructor(private router: Router){ 
-   
+  
     this.titleName= 'ALE';
     this.titleArea= 'WEB';
     this.titleJob= 'DEV';
@@ -103,7 +100,7 @@ export class AppComponent {
     $(".hide").on('click', function(){
       $("nav ul").toggle('slow');
     })
- 
+
     // -----------------------------------------------------NAVBAR-------------------
     var posAnteriorScrol = document.documentElement.scrollTop;
     
@@ -116,7 +113,7 @@ export class AppComponent {
     const esconderMostrarMenu = () =>{
       var posActualScrol = document.documentElement.scrollTop;
       if(posAnteriorScrol>posActualScrol){
-         this.navbar.nativeElement.style.top="0"; 
+          this.navbar.nativeElement.style.top="0"; 
         //document.getElementById("navbar").style.top = "0"
       }else
         this.navbar.nativeElement.style.top="-70px"; 
@@ -124,10 +121,7 @@ export class AppComponent {
         posAnteriorScrol = posActualScrol;
     }
   
-      // setTimeout(() => {
-      //   this.video.nativeElement.play();
-      // }, 5000);
- 
+
   }
 
   
@@ -135,6 +129,5 @@ export class AppComponent {
     this.isShown = ! this.isShown;  
   }
 
-  
 }
 

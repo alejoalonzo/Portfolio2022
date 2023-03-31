@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKeyOpenai: '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'
+ apiKey: ''
 };
 
 /*
