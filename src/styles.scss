@@ -75,6 +75,11 @@ canvas{
   width: 100vw;
   height: 100vh;
 }
+.canvasBackground {
+  background-image: url('../src/assets/media/IAM.png');
+  background-size: cover;
+  margin-left: 1%;
+}
 #copy{
   display: none;
 }
@@ -103,6 +108,8 @@ canvas{
   transform: translate(-50%, -50%);
   z-index: 6;
 } 
+
+
 .displayNone {
   display: none;
 }
@@ -265,7 +272,6 @@ header {
   }
 }
 
-/*---------header2--------------*/
 
 /*---------------------------------sideBars-------------------------------------*/
 .boxSideBars {
@@ -1251,6 +1257,5 @@ form input[type="submit"]:hover {
     display: none;
   }
 }
-
 
 

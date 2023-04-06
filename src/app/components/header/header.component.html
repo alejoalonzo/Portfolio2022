@@ -12,12 +12,12 @@
     </div>
     <div id="squareTitle">
         <section id="title" #titleNamed class="animate__animated animate__flipInX">
-            {{ title }}
+            {{ title }} <br> {{ title2 }}
         </section>
         <span id="subTitle" class="animate__animated animate__rubberBand">
-            Hi there! I'm Alejandro <br>I'm a web developer.
-            <br><a [routerLink]="['/projects']" fragment="projectsTitle"><span class="linkBGdark">View my work <fa-icon
-                        [icon]="faArrowRight"></fa-icon></span></a>
+            {{ subTitle }} <br> {{ subTitle2 }}
+            <!-- <br><a [routerLink]="['/projects']" fragment="projectsTitle"><span class="linkBGdark">View my work <fa-icon
+                        [icon]="faArrowRight"></fa-icon></span></a> -->
         </span>
     </div>
     <div class="scrollDownHomeRight">

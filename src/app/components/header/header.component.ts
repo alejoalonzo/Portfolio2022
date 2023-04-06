@@ -10,12 +10,16 @@ import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements AfterViewInit {
   
   @Input() title!: string;
+  @Input() title2!: string;
+  @Input() subTitle!: string;
+  @Input() subTitle2!: string;
 
   faArrowDown = faArrowDown;
   faArrowRight = faArrowRight;
   @ViewChild('header') containerRefHeader!: ElementRef;
   @ViewChild("video", { static: true, read: ElementRef })
   videoHeader!: ElementRef;
+
 
   constructor() { }
 

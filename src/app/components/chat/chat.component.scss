@@ -30,10 +30,14 @@ $TextColorGlobalSecundary: #acafba;
 .my-input{
     background-color: $TextColorGlobalSecundary;
     color: $backgroundColorDarkSecundary;
+    margin-top: 20px;
 }
 .response{
     background-color: $backgroundColorGlobalPrimary;
     color: $backgroundColorDarkThird;
     list-style: none;
-    padding-top: 10px;
+    border-radius: 0.375rem;
 }
+input[type="text"]:focus {
+    color: $backgroundColorFormBox;
+  }
