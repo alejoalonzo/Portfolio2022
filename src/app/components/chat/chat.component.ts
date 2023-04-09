@@ -25,6 +25,7 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   // this.chatgptSvc.init();
   }
 
 }

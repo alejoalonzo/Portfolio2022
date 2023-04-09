@@ -19,6 +19,7 @@ import { ParticleAnimationComponent } from './components/particle-animation/part
 import { MegaTextVideoComponent } from './components/mega-text-video/mega-text-video.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { ChatGPTService } from './services/chatGPTservice';
+import { OpenaiService } from './services/openai.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 
@@ -56,6 +57,7 @@ const routerOptions: ExtraOptions = {
   ],
   providers: [
     appRoutingProviders,
+    OpenaiService,
     ChatGPTService
   ],
   bootstrap: [AppComponent]
