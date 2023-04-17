@@ -1,4 +1,3 @@
-import * as AOS from 'aos';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { faGithub, faLinkedinIn, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight, faBars, faCoffee, faFolderOpen, faMailBulk, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
@@ -94,8 +93,6 @@ export class AppComponent {
         this.isHomePage = this.router.url === '/';
       }
     });
-
-    AOS.init(); 
   
     $(".hide").on('click', function(){
       $("nav ul").toggle('slow');

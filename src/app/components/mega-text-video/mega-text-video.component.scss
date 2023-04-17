@@ -7,17 +7,6 @@
   font-family: "MavenPro-Regular";
   src: url("../../../fonts/MavenPro-Regular.ttf");
 }
-$textFontGeneral: "MavenPro-Regular";
-$backGroundColorDark : #35373e;
-$TextColorGlobalSecundary: #acafba;
-
-*{
-  box-sizing: border-box;
-}
-body {
-  background: white;
-  margin: 0;
-}
 
 header { 
   width: 100%;
@@ -57,7 +46,7 @@ svg rect {
 svg > rect {
   -webkit-mask: url(#mask);
   mask: url(#mask);
-  fill: $backGroundColorDark;
+  fill: #35373e;
 }
 
 svg > text {
@@ -73,12 +62,12 @@ svg > text {
 .containerSubTitleProjectWord{
   display: flex;
   width: 100%;
-  background-color: $backGroundColorDark;
+  background-color: #35373e;
 }
 .subTitleProjectWord{
-  font-family: $textFontGeneral;
+  font-family: "MavenPro-Regular";
   //margin-left: 5%;
-  color: $TextColorGlobalSecundary;
+  color: #acafba;
   position: relative;
   top: 160px;
   left: calc(50% + 136px);
@@ -87,18 +76,22 @@ svg > text {
 .containerSubTitleProjectWord2{
   display: flex;
   width: 100%;
-  background-color: $backGroundColorDark;  
-  justify-content: end;
+  background-color: #35373e;  
+  justify-content: flex-end;
 }
 .subTitleProjectWord2{
-  font-family: $textFontGeneral;
-  color: $TextColorGlobalSecundary;
+  font-family: "MavenPro-Regular";
+  color: #acafba;
 
   position: relative;
   bottom: 55px;
   // right: 5%;
   right: calc(50% - 650px);
   z-index: 2;
+}
+.fixed-height {
+  height: 100vh;
+  overflow: hidden;
 }
 @media (max-width: 1550px){
   .subTitleProjectWord{

@@ -1,35 +1,11 @@
 <app-header [title]="'CONTACT'"></app-header>
 <div id="createProject">
     <div id="imgContactProject">
-        <fa-icon [icon]="faMapMarkerAlt" id="faMapMarkerAlt" (mouseover)="changeClass=true"
-            (mouseout)="changeClass=false">
-        </fa-icon>
-        <div class="radar"></div>
-        <div class="radar"></div>
-        <div class="radar"></div>
-        <div [class.active]="changeClass" class="tooltip" id="tooltip" (mouseover)="changeClass=true"
-            (mouseout)="changeClass=false">
-            <div class="thumb">
-                <img src="../assets/media/losAngeles.jpg" alt="">
-            </div>
-            <div class="info">
-                <h3 class="title">I'm here!</h3>
-                <span class="resumen">Feel free to drop a line in the form or call me to <a href="tel:+16262436274">+1
-                        (626) 243 6274</a> and if you prefer
-                    also can get
-                    in touch with me through <a href="mailto:info@alejandroalonzo.com"
-                        target="_blank">alejandro.12w@gmail.com</a></span>
-                <span class="adress">LOS ANGELES, CALIFORNIA 90020 </span>
-                <div class="containerBtn">
-                    <a href="https://goo.gl/maps/JxnfjFpTL3JMupHq9" target="_blank" rel="noopener noreferrer">
-                        <button>Open in Google Maps</button></a>
-                </div>
-            </div>
-        </div>
+        <iframe width="100%" height="100%"
+            src="https://api.maptiler.com/maps/a4083f5d-329e-41ef-85be-b6cfc48eab48/?key=3ya2S1TEUt3cQkhOpimh&version=v1#10.2/34.04267/-118.24567"></iframe>
     </div>
-
     <div class="containerForm">
-        <h3 class="titles" data-aos="fade-left" data-aos-duration="2000">{{title}}</h3>
+        <h3 class="titles">{{title}}</h3>
         <span class="textRequirmentsForm">
             Fill in the required fields (<span class="red">*</span>) to unlock the submit button
         </span>
@@ -54,13 +30,6 @@
                 <span class="formError" *ngIf="message.touched && !message.valid">*</span>
             </span>
             <div class="OpenAndSubmit">
-                <!-- <div class="file">
-                    <label for="image">Submit
-                        <fa-icon [icon]="faArrowRight" id="iconFolder"></fa-icon>
-                    </label>
-                    <input type="submit" name="" value="Submit" placeholder="Submit">
-                    
-                </div> -->
                 <div class="submitForm">
                     <input type="submit" name="" id="" value="Submit" placeholder="Submit"
                         [disabled]="!contactForm.form.valid">

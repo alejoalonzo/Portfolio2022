@@ -31,11 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/aos/dist/aos.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/aos/dist/aos.js",
               "node_modules/jquery/dist/jquery.min.js"
             ]
           },
