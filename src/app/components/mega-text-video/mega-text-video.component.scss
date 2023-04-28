@@ -15,10 +15,11 @@ header {
   max-width: 100%;
   
   // overflow: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 header video { 
-  width: 100%;
+  width: 100vw;
 }
 
 svg { 
@@ -27,6 +28,8 @@ svg {
   top: 0;
   left: 0; // needed for FF, Safari, Edge
   height: 100%;
+
+  scroll-snap-align: start;
 }
 
 svg text {
@@ -36,7 +39,6 @@ svg text {
   font-size: 4.5em;
   letter-spacing: -2px;
   text-align: center;
-
 }
 
 svg rect {
@@ -90,9 +92,11 @@ svg > text {
   z-index: 2;
 }
 .fixed-height {
-  height: 100vh;
-  overflow: hidden;
+  position: fixed;
+  top: 0; 
+  // width: 100%;
 }
+
 @media (max-width: 1550px){
   .subTitleProjectWord{
     position: relative;
@@ -104,4 +108,20 @@ svg > text {
     bottom: 50px;
     right: calc(50% - 540px);
   }
+}
+/*mobile*/
+@media (max-width: 845px){
+  .subTitleProjectWord{
+    position: relative;
+    top: 280px;
+    left: 10px;
+  }
+  svg text {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.6em!important;
+    letter-spacing: -1px!important;
+
+  }
+
 }

@@ -152,8 +152,8 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
 
       function onMouseClick() {
         radius++;
-        if (radius === 5) {
-          radius = 0;
+        if (radius === 3) {
+          radius = 1;
         }
       }
 

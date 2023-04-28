@@ -2,16 +2,17 @@
 <div class="containerSubTitleProjectWord">
 
 </div>
-<div class="containerSubTitleProjectWord">
+<div #containerSubTitleProjectWord class="containerSubTitleProjectWord">
     <span class="subTitleProjectWord">Hi there! I'm Alejandro Alonzo, I'm a <a [routerLink]="['/projects']"
-            fragment="projectsTitle"><span class="linkBGdark">web developer. </span></a></span>
+            fragment="projectsTitle"><span class="linkBGdark">web developer. // Let me show you <fa-icon
+                    [icon]="faArrowRight"></fa-icon></span></a></span>
 </div>
 
 
 <header #headerE1>
-    <video #videoEl autoplay playsinline muted loop preload poster="">
+    <video #videoEl autoplay muted loop preload poster="">
         <!-- <source src="" /> -->
-        <source src="../../../assets/media/videoBG.mp4" />
+        <source src="../../../assets/media/MyWork.mp4" />
     </video>
     <svg #svgElement xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80" preserveAspectRatio="xMidYMid slice">
         <defs>
@@ -25,7 +26,7 @@
     </svg>
 </header>
 
-<div class="containerSubTitleProjectWord2">
+<!-- <div class="containerSubTitleProjectWord2">
     <span class="subTitleProjectWord2">See <a [routerLink]="['/projects']" fragment="projectsTitle"><span
                 class="linkBGdark">details <fa-icon [icon]="faArrowRight"></fa-icon></span></a></span>
-</div>
+</div> -->

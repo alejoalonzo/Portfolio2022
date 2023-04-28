@@ -80,6 +80,9 @@ canvas{
   background-size: cover;
   margin-left: 1%;
 }
+.canvasBackgroundTextIam{
+  display: none;
+}
 #copy{
   display: none;
 }
@@ -984,7 +987,9 @@ form input[type="submit"]:hover {
     left: calc(50% - 110px);
     display: none;
 }
-
+.titleHeaderText{
+  font-size: 22em;
+}
   .aboutMe {
       height: 750px;
   }
@@ -1016,9 +1021,10 @@ form input[type="submit"]:hover {
   #myVideo{
     min-height: 80%;
   }
-  .scrollDown{
+  .scrollDown, .scrollDownHomeLeft span,.scrollDownHomeRight span{
     display: none;
   }
+  
   nav {
     height: auto;
   }
@@ -1036,6 +1042,25 @@ form input[type="submit"]:hover {
     display: flex;
     padding: 25px 25px 0 25px;
   }
+  .titleHeaderText {
+    font-size: 8em;
+    letter-spacing: -3px;
+    position: absolute;
+    bottom: 20%;
+    line-height: 100%;
+  }
+  .canvasBackground{
+    background: transparent;
+  }
+  .canvasBackgroundTextIam {
+    display: block;
+    color: $TextColorGlobalDarkBG;
+    font-family: "IMPACT";
+    font-size: 10em;
+    position: absolute;
+    top: 36%;
+    left: 12%;
+}
 
   //about me----------
   .aboutMeContainer{
