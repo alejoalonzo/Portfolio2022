@@ -73,7 +73,7 @@ svg > text {
   //margin-left: 5%;
   color: #acafba;
   position: relative;
-  top: 160px;
+  top: 220px;
   left: calc(50% + 136px);
   z-index: 2;
 }
@@ -99,10 +99,38 @@ svg > text {
   // width: 100%;
 }
 
+.playVideoButon{
+  font-size: 3em;
+  color: #eeeef0;
+  position: relative;
+  top: 250px;
+  left: 30%;
+  z-index: 10;
+  opacity: 1;
+  animation: faAnimado 10s infinite;
+}
+.playVideoButon:hover{
+  animation-play-state: paused;
+  color: #35373e!important;
+}
+
+@keyframes faAnimado{
+  0%{
+    color: #eeeef0;
+  }
+  50%{
+    color: #00ADB5;
+  }
+  100%{
+    color: #eeeef0;
+  }
+}
+
+
 @media (max-width: 1550px){
   .subTitleProjectWord{
     position: relative;
-    top: 130px;
+    top: 180px;
     left: calc(50% + 110px);
   }
   .subTitleProjectWord2{
@@ -124,6 +152,9 @@ svg > text {
     font-size: 1.6em!important;
     letter-spacing: -1px!important;
 
+  }
+  .playVideoButon{
+    display: none;
   }
 
 }

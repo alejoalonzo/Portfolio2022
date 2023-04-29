@@ -1,6 +1,6 @@
 import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faPlayCircle  } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-mega-text-video',
   templateUrl: './mega-text-video.component.html',
@@ -9,13 +9,15 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 export class MegaTextVideoComponent implements AfterViewInit {
   @ViewChild('headerText', { static: false }) headerTextElementRef!: ElementRef<SVGTextElement>;
   @ViewChild('svgElement', { static: false }) svgElementRef!: ElementRef<SVGElement>;
+  @ViewChild('playVideoButon', { static: false }) playVideoButon!: ElementRef<SVGElement>;
   @ViewChild('headerE1') containerRef!: ElementRef;
   @ViewChild('headerText') zoomElement!: ElementRef;
   @ViewChild('containerSubTitleProjectWord', {static: true}) containerSubTitleProjectWord!: ElementRef;
   @ViewChild("videoEl", { static: true, read: ElementRef })
-  video!: ElementRef;
+  video!: ElementRef; 
 
   faArrowRight = faArrowRight;
+  faPlayCircle  = faPlayCircle;
 
   constructor(private elementRef: ElementRef) { }
 
@@ -24,10 +26,16 @@ export class MegaTextVideoComponent implements AfterViewInit {
       const videoElement = this.video.nativeElement;
       const textElement = this.headerTextElementRef.nativeElement;
       const containerSubTitleProjectWord = this.containerSubTitleProjectWord.nativeElement;
+      const playVideoButon = this.playVideoButon.nativeElement;
+
       let fontSizevar = 4.5;
       let prevScrollPos = window.pageYOffset;
       let lockScroll = false; 
 
+      window.addEventListener('click', function(){
+        playVideoButon.style.opacity="0"
+      })
+        
       window.addEventListener("scroll", function() {
 
         let currentScrollPos = window.pageYOffset;
