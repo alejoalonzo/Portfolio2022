@@ -54,17 +54,20 @@ export class MegaTextVideoComponent implements AfterViewInit {
         }
         if(!lockScroll){
 
-        }        
+        }    
+   
 
         textElement.style.fontSize =`${fontSizevar}em`;
 
-        if(fontSizevar >= 5.5){
+        if(fontSizevar > 4.5){
 
           containerSubTitleProjectWord.style.opacity="0"; 
         }
-        if(fontSizevar < 5.5){
+        if(fontSizevar <= 4.5){
           containerSubTitleProjectWord.style.opacity="1"; 
         }
+
+
       });
       
       videoElement.load();

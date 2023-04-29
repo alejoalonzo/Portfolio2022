@@ -19,8 +19,10 @@ header {
 }
 
 header video { 
-  width: 100vw;
+  width: 120vw!important; 
+  object-fit: cover;
 }
+
 
 svg { 
   width: 100%;

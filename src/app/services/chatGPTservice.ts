@@ -39,13 +39,14 @@ export class ChatGPTService {
     ).subscribe(data => {
       $('.response').append(`
       <ul class="list-group mb-2 response-item">
-        <li class="list-group-item bg-primary text-light">${data}</li><br>
+        <li class="list-group-item text-dark">${data}</li><br>
       </ul>
     `);
     $('.response .list-group-item').last().css({
       'list-style': 'none',
       'margin-top': '20px',
       'margin-bottom': '20px',
+      'border': '1px solid transparent',
     });
     });
   }
