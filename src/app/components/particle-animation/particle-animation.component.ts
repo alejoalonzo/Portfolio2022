@@ -128,12 +128,29 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        ctx.font = "bold " + ww / 8 + "px Times New Roman, Times, serif";//sans-serif
-        console.log(ctx.font);
-        ctx.textAlign = "left";
-        ctx.fillText("", ww / 2, wh / 2 - ww / 10.5);
-        ctx.fillText("ALE", ww / 2, wh / 2);
-        ctx.fillText("WEB", ww / 2, wh / 2 + ww / 10.5);
+        // ctx.font = "bold " + ww / 8 + "px Times New Roman, Times, serif";//sans-serif
+        // console.log(ctx.font);
+
+        if (ww <= 768) {
+          ctx.font = "bold " + ww / 3 + "px Times New Roman, Times, serif";//sans-serif
+          console.log(ctx.font);
+          ctx.textAlign = "center";
+          ctx.fillText("", ww / 2, wh / 2 - ww / 3.5);
+          ctx.fillText("ALE", ww / 2, wh / 2);
+          ctx.fillText("WEB", ww / 2, wh / 2 + ww / 3.5);
+        } else {
+          ctx.font = "bold " + ww / 8 + "px Times New Roman, Times, serif";//sans-serif
+          console.log(ctx.font);
+          ctx.textAlign = "left";
+          ctx.fillText("", ww / 2, wh / 2 - ww / 10.5);
+          ctx.fillText("ALE", ww / 2, wh / 2);
+          ctx.fillText("WEB", ww / 2, wh / 2 + ww / 10.5);
+        }
+
+        // ctx.textAlign = "left";
+        // ctx.fillText("", ww / 2, wh / 2 - ww / 10.5);
+        // ctx.fillText("ALE", ww / 2, wh / 2);
+        // ctx.fillText("WEB", ww / 2, wh / 2 + ww / 10.5);
 
         var data = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);

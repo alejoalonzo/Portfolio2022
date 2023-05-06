@@ -107,7 +107,7 @@ svg > text {
   left: 30%;
   z-index: 10;
   opacity: 1;
-  animation: faAnimado 10s infinite;
+  animation: faAnimado 2s infinite;
 }
 .playVideoButon:hover{
   animation-play-state: paused;
@@ -156,5 +156,11 @@ svg > text {
   .playVideoButon{
     display: none;
   }
-
+  .subTitleProjectWord{
+    position: relative;
+    top:0
+  }
+  .containerMegavideoText{
+    display:none;
+  }
 }

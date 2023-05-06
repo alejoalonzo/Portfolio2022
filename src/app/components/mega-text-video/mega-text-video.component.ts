@@ -91,6 +91,10 @@ export class MegaTextVideoComponent implements AfterViewInit {
           console.log('play error', error);
         });
       });
+
+      if (window.innerWidth <= 768) {
+        this.containerRef.nativeElement.style.display = 'none';
+    }
       
     }
 
