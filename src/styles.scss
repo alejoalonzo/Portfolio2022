@@ -168,6 +168,10 @@ a{
 
 }
 
+.videoSpace{
+  height: 4000px;
+}
+
 /*Header-----------------------------------------------------------------------------*/
 
 #myVideo {
@@ -399,6 +403,7 @@ nav a {
   font-size: 15px;
   transition: all 400ms;
   z-index: 7;
+  padding: 25px 0;
 }
 nav a:hover{
   color: $backgroundColorFormBox;
@@ -725,6 +730,7 @@ form input[type="submit"]:hover {
  #imgContactProject {
    margin: 0;
    width: 50%;
+   height: 100%;
    background-image: url("./assets/media/LAcaliformiaMap.jpg");
    display: flex;
    justify-content: center;
@@ -1080,6 +1086,10 @@ form input[type="submit"]:hover {
 }
 
   //about me----------
+  .videoSpace{
+    height: 0;
+    display: none;
+  }
   .aboutMeContainer{
     flex-wrap: inherit;
     width: 95%;

@@ -128,9 +128,6 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // ctx.font = "bold " + ww / 8 + "px Times New Roman, Times, serif";//sans-serif
-        // console.log(ctx.font);
-
         if (ww <= 768) {
           ctx.font = "bold " + ww / 3 + "px Times New Roman, Times, serif";//sans-serif
           console.log(ctx.font);
@@ -147,23 +144,31 @@ export class ParticleAnimationComponent implements AfterViewInit {// Exchanged O
           ctx.fillText("WEB", ww / 2, wh / 2 + ww / 10.5);
         }
 
-        // ctx.textAlign = "left";
-        // ctx.fillText("", ww / 2, wh / 2 - ww / 10.5);
-        // ctx.fillText("ALE", ww / 2, wh / 2);
-        // ctx.fillText("WEB", ww / 2, wh / 2 + ww / 10.5);
-
         var data = ctx.getImageData(0, 0, ww, wh).data;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.globalCompositeOperation = "screen";
 
-        particles = [];
-        for (var i = 0; i < ww; i += Math.round(ww / 150)) {
-          for (var j = 0; j < wh; j += Math.round(ww / 150)) {
-            if (data[(i + j * ww) * 4 + 3] > 150) {
-              particles.push(new Particle(i, j));
+        if (ww <= 768){
+          particles = [];
+          for (var i = 0; i < ww; i += Math.round(ww / 50)) {
+            for (var j = 0; j < wh; j += Math.round(ww / 50)) {
+              if (data[(i + j * ww) * 4 + 3] > 150) {
+                particles.push(new Particle(i, j));
+              }
+            }
+          }
+
+        }else{
+          particles = [];
+          for (var i = 0; i < ww; i += Math.round(ww / 150)) {
+            for (var j = 0; j < wh; j += Math.round(ww / 150)) {
+              if (data[(i + j * ww) * 4 + 3] > 150) {
+                particles.push(new Particle(i, j));
+              }
             }
           }
         }
+
         amount = particles.length;
       }
 

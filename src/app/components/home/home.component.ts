@@ -12,8 +12,9 @@ export class HomeComponent implements OnInit {
   faArrowDown = faArrowDown;
   faArrowRight = faArrowRight;
 
-  constructor() { }
-
+  constructor() { 
+  }
+  
   ngOnInit(): void {
   }
 
