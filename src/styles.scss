@@ -418,9 +418,8 @@ nav a:hover ~ .cursor{
 .hide{
   color: $TextColorGlobalSecundary;
   cursor: pointer;
-  padding: 5px;
-  margin: 10px;
   display: none;
+  justify-content: center;
 }
 /*****************************************Footer******************************/
 footer {
@@ -543,6 +542,7 @@ transform: translateX(0);
   position: relative;
   width: auto;
   background-color:$backgroundColorGlobalPrimary;
+  z-index: -1;
 }
 .slider .sliderTrack{
   animation:  scroll 40s linear infinite;
@@ -1056,11 +1056,14 @@ form input[type="submit"]:hover {
     margin: 20px 0 0 20px;
   }
   nav li {
-    margin: 20px;
+    margin: 15px;
+  }
+  #homeBtnMenu {
+    width:20%;
   }
   .hide{
     display: flex;
-    padding: 25px 25px 25px 25px;
+    padding: 0;
   }
 
   .titleHeaderText {

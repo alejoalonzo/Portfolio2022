@@ -20,7 +20,6 @@ export class MegaTextVideoComponent implements AfterViewInit {
   faArrowRight = faArrowRight;
   faPlayCircle  = faPlayCircle;
 
-
   constructor(private elementRef: ElementRef, private componentTopAbout: HomeComponent) { }
 
   ngAfterViewInit(): void {
@@ -30,14 +29,17 @@ export class MegaTextVideoComponent implements AfterViewInit {
       const textElement = this.headerTextElementRef.nativeElement;
       const containerSubTitleProjectWord = this.containerSubTitleProjectWord.nativeElement;
       const playVideoButon = this.playVideoButon.nativeElement;
-
+      
       let fontSizevar = 4.5;
+      const maxFontSize = 65;
+      const minFontSize = 4.5;
+
       let prevScrollPos = window.pageYOffset;
 
       window.addEventListener('click', function(){
         playVideoButon.style.opacity="0"
       })
-        
+
       window.addEventListener("scroll", function() {
 
         let currentScrollPos = window.pageYOffset;
@@ -48,7 +50,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
           if (currentScrollPos > prevScrollPos) {
             fontSizevar += 0.5; 
           } else {
-            fontSizevar -= 0.5; 
+            fontSizevar -= 0.5;
           }
           if (fontSizevar >= 5 && fontSizevar <= 65) {  
             containerRef.style.position = "fixed";
@@ -60,6 +62,11 @@ export class MegaTextVideoComponent implements AfterViewInit {
             playVideoButon.style.position = "relative";
           }
 
+          if (fontSizevar > maxFontSize) {
+            fontSizevar = maxFontSize;
+          } else if (fontSizevar < minFontSize) {
+            fontSizevar = minFontSize;
+          }
         }
         
         prevScrollPos = currentScrollPos;
