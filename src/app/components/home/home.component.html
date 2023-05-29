@@ -1,14 +1,30 @@
-<!-- UPGRADE 2.0 -->
+<!-- HEEADER------------------------------------------------------------------------ -->
+<app-particle-animation></app-particle-animation>
+
+<div class="scrollDownHomeLeft">
+    <span>
+        Scroll down
+    </span>
+    <fa-icon [icon]="faArrowDown"></fa-icon>
+</div>
+<div class="scrollDownHomeRight">
+    <span>
+        Scroll down
+    </span>
+    <fa-icon [icon]="faArrowDown"></fa-icon>
+</div>
+
+<app-mega-text-video></app-mega-text-video>
+
 <!-- about------------------------------------------------------------------------ -->
-<section class="aboutMe">
+<section id="aboutMe" #aboutMe class="aboutMe">
     <div class="aboutMeContainer">
         <div id="imgAbout">
-            <img data-aos="fade-up" data-aos-duration="1000" id="imgAbout1" src="../assets/media/about.jpg" alt="About">
-            <img data-aos="fade-down" data-aos-duration="1000" id="imgAbout2" src="../assets/media/74553037.jpeg"
-                alt="About">
+            <img id="imgAbout1" src="../assets/media/about.jpg" alt="About">
+            <img id="imgAbout2" src="../assets/media/74553037.jpeg" alt="About">
 
         </div>
-        <div class="textAbout" data-aos="fade-left" data-aos-duration="2000">
+        <div class="textAbout">
             <h3 class="titles">
                 Who's this guy
             </h3>
@@ -222,20 +238,20 @@
         </div>
     </div>
     <div class="containerForm paddingRight200">
-        <h3 class="titles" data-aos="fade-left" data-aos-duration="2000">My background</h3>
-        <span class="descriptionAbout" data-aos="fade-left" data-aos-duration="2000">
+        <h3 class="titles">My background</h3>
+        <span class="descriptionAbout">
             I enjoy creating things that live on the internet. My interest in web development started back a long time
             ago when
             I was completing my professional career in graphic design.
         </span>
-        <span class="descriptionAbout marginTop50" data-aos="fade-left" data-aos-duration="2000">
+        <span class="descriptionAbout marginTop50">
 
             I'm lucky to have worked with amazing people in Europe
             for important and ambitious global companies where I learned a lot.
             My main focus these days is building accessible, inclusive products and digital experiences for a variety of
             clients.
         </span>
-        <span class="descriptionAbout marginTop50" data-aos="fade-left" data-aos-duration="2000">
+        <span class="descriptionAbout marginTop50">
             You can check out the whole
             list of degrees, courses, soft
             and hard skills in my
@@ -246,22 +262,4 @@
         </span>
     </div>
 </div>
-
-<!-- footer------------------------------------------------------------------------ -->
-<footer>
-    <div class="footerTextContainer">
-        <div class="footerText animatedBAckToTop">
-            <a [routerLink]="['/about-me']">
-                <fa-icon [icon]="faArrowUp" class="socialIcons linkBGdark"></fa-icon>
-            </a>
-        </div>
-        <div class="footerText">
-            Wanna get in touch or talk about a project?
-        </div>
-        <div class="footerText">
-            Feel free to drop a line in the form at the
-            <a [routerLink]="['/contact']" fragment="createProject" class="linkBGdark">contact page</a>.
-        </div>
-
-    </div>
-</footer>
+<app-footer></app-footer>

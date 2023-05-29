@@ -1,0 +1,174 @@
+@font-face {
+  font-family: IMPACT;
+  src:url("../../../fonts/IMPACT.TTF");
+}
+
+@font-face {
+  font-family: "MavenPro-Regular";
+  src: url("../../../fonts/MavenPro-Regular.ttf");
+}
+
+
+header { 
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 100%;
+  
+  // overflow: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+header video { 
+  width: 120vw!important; 
+  object-fit: cover;
+}
+
+
+svg { 
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0; // needed for FF, Safari, Edge
+  height: 100%;
+
+  scroll-snap-align: start;
+}
+
+svg text {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 4.5em;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+svg rect {
+  fill: white;
+}
+
+svg > rect {
+  -webkit-mask: url(#mask);
+  mask: url(#mask);
+  fill: #35373e;
+}
+
+svg > text {
+  fill: black;
+  width: 100%;
+}
+
+#header-text {
+  transform-origin: center center;
+  transition: transform 0.5s ease-out;
+}
+
+.containerSubTitleProjectWord{
+  display: flex;
+  width: 100%;
+  background-color: #35373e;
+}
+.subTitleProjectWord{
+  font-family: "MavenPro-Regular";
+  //margin-left: 5%;
+  color: #acafba;
+  position: relative;
+  top: 160px;
+  left: calc(50% + 136px);
+  z-index: 2;
+}
+.containerSubTitleProjectWord2{
+  display: flex;
+  width: 100%;
+  background-color: #35373e;  
+  justify-content: flex-end;
+}
+.subTitleProjectWord2{
+  font-family: "MavenPro-Regular";
+  color: #acafba;
+
+  position: relative;
+  bottom: 55px;
+  // right: 5%;
+  right: calc(50% - 650px);
+  z-index: 2;
+}
+.fixed-height {
+  position: fixed;
+  top: 0; 
+  // width: 100%;
+}
+
+.playVideoButon{
+  font-size: 3em;
+  color: #eeeef0;
+  position: fixed;
+  // top: 250px;
+  // left: 30%;
+  top: 40%;
+  left: 50%;
+  z-index: 10;
+  opacity: 0;
+  animation: faAnimado 2s infinite;
+}
+.diplayOn{
+  opacity: 1;
+}
+.playVideoButon:hover{
+  animation-play-state: paused;
+  color: #35373e!important;
+}
+
+@keyframes faAnimado{
+  0%{
+    color: #eeeef0;
+  }
+  50%{
+    color: #00ADB5;
+  }
+  100%{
+    color: #eeeef0;
+  }
+}
+
+/*laptop*/
+@media (max-width: 1550px){
+  .subTitleProjectWord{
+    position: relative;
+    top: 130px;
+    left: calc(50% + 110px);
+  }
+  .subTitleProjectWord2{
+    position: relative;
+    bottom: 50px;
+    right: calc(50% - 540px);
+  }
+}
+
+
+/*mobile*/
+@media (max-width: 845px){
+  .subTitleProjectWord{
+    position: relative;
+    top: 280px;
+    left: 10px;
+  }
+  svg text {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.6em!important;
+    letter-spacing: -1px!important;
+
+  }
+  .playVideoButon{
+    display: none;
+  }
+  .subTitleProjectWord{
+    position: relative;
+    top:0
+  }
+  .containerMegavideoText{
+    display:none;
+  }
+}

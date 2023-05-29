@@ -1,37 +1,5 @@
-<video #video id="myVideo">
-  <source src="../assets/media/videoBG.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-<header id="header">
-
-  <div class="scrollDown">
-    <span>
-      Scroll down
-    </span>
-    <fa-icon [icon]="faArrowDown"></fa-icon>
-  </div>
-  <div id="squareTitle">
-    <section id="title" #titleNamed class="animate__animated animate__flipInX">
-      ALE<br>
-      WEB<br>
-      DEV<br>
-    </section>
-    <span id="subTitle" class="animate__animated animate__rubberBand">
-      Hi there! I'm Alejandro <br>I'm a web developer.
-      <br><a [routerLink]="['/projects']" fragment="projectsTitle"><span class="linkBGdark">View my work <fa-icon
-            [icon]="faArrowRight"></fa-icon></span></a>
-    </span>
-  </div>
-  <div class="scrollDown">
-    <span>
-      Scroll down
-    </span>
-    <fa-icon [icon]="faArrowDown"></fa-icon>
-  </div>
-
-</header>
-
-
+<div class="cursor"></div>
+<div class="cursor2"></div>
 <!-- sideBars ------------------------------------------------------------------------>
 <div id="switchColor">
   <a href="https://api.whatsapp.com/send?phone=16262436274&text=Hello!&nbsp;Can&nbsp;you&nbsp;help&nbsp;me?"
@@ -40,7 +8,7 @@
       <fa-icon [icon]="faWhatsapp" class="socialIcons"></fa-icon>
     </div>
   </a>
-  <a href="mailto:info@alejandroalonzo.com" target="_blank" rel="noopener noreferrer">
+  <a href="mailto:alejandro.12w@gmail.com" target="_blank" rel="noopener noreferrer">
     <div id="night" class="boxSideBars">
       <fa-icon [icon]="faMailBulk" class="socialIcons"></fa-icon>
     </div>
@@ -52,11 +20,11 @@
       <fa-icon [icon]="faLinkedinIn" class="socialIcons"></fa-icon>
     </div>
   </a>
-  <a href="https://www.youtube.com/channel/UCFt69MxS_7dK54ii5yQoNEA" target="_blank" rel="noopener noreferrer">
+  <!-- <a href="https://www.youtube.com/channel/UCFt69MxS_7dK54ii5yQoNEA" target="_blank" rel="noopener noreferrer">
     <div id="youtube" class="boxSideBars">
       <fa-icon [icon]="faYoutube" class="socialIcons"></fa-icon>
     </div>
-  </a>
+  </a> -->
   <a href="https://github.com/alejoalonzo" target="_blank" rel="noopener noreferrer">
     <div id="github" class="boxSideBars">
       <fa-icon [icon]="faGitHub" class="socialIcons"></fa-icon>
@@ -66,29 +34,19 @@
 
 <!-- navbar------------------------------------------------------------------------ -->
 <nav #navbar>
-  <ul>
-    <li id="homeBtnMenu"><a [routerLink]="['']" [routerLinkActive]="['actived']">ALE</a></li>
-    <li><a [routerLink]="['/about-me']" fragment="aboutMe" [routerLinkActive]="['actived']">ABOUT</a></li>
+  <ul id="homeBtnMenu">
+    <li><a [routerLink]="['']" [routerLinkActive]="['actived']">ALEX</a></li>
+  </ul>
+  <ul id="btnsMenu">
     <li><a [routerLink]="['/projects']" fragment="projectsTitle" [routerLinkActive]="['actived']">PROJECTS</a></li>
     <!-- <li><a [routerLink]="['/create']" [routerLinkActive]="['actived']">CREATE</a></li> -->
     <li><a [routerLink]="['/contact']" fragment="createProject" [routerLinkActive]="['actived']">CONTACT</a></li>
-    <li><a href="/assets/media/ManuelAlejandroCV.pdf" [routerLinkActive]="['actived']" target="blank">RESUME</a></li>
+    <!-- <li><a href="/assets/media/ManuelAlejandroCV.pdf" [routerLinkActive]="['actived']" target="blank">RESUME</a></li> -->
+    <li><a [routerLink]="['/chatbot']" fragment="chatbot" [routerLinkActive]="['actived']">CHATBOT</a></li>
   </ul>
   <div class="hide">
     <fa-icon [icon]="faBars"></fa-icon>
   </div>
-  <!-- <div #hide class="hide" (clik)="toggleShow()">
-    <fa-icon [icon]="faBars"></fa-icon>
-  </div> -->
-  <!-- <button class="hide" (click)="toggleShow()" type="checkbox">
-    <fa-icon [icon]="faBars"></fa-icon>
-  </button>
-  <div *ngIf="isShown" class="row container-fluid" id="divshow">
-    divContente
-  </div> -->
 </nav>
-<!-- class="animate__animated animate__flipInX" -->
-<!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
-<!-- <fa-icon [icon]="faFolderOpen"></fa-icon> -->
 
 <router-outlet></router-outlet>
