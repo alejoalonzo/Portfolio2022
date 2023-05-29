@@ -50,6 +50,19 @@ body {
   cursor: none;
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+  background: #2d2f35;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    #00d0db,
+    #00ADB5
+  );
+}
+
 /*global colors*/
 $backgroundColorGlobalPrimary: #ffffff;
 $backgroundColorGlobalSecundary: #f4f4f6;
@@ -166,10 +179,6 @@ a{
   text-decoration: none;
   cursor: none;
 
-}
-
-.videoSpace{
-  height: 4000px;
 }
 
 /*Header-----------------------------------------------------------------------------*/

@@ -74,7 +74,7 @@ svg > text {
   //margin-left: 5%;
   color: #acafba;
   position: relative;
-  top: 220px;
+  top: 160px;
   left: calc(50% + 136px);
   z-index: 2;
 }
@@ -103,12 +103,17 @@ svg > text {
 .playVideoButon{
   font-size: 3em;
   color: #eeeef0;
-  position: relative;
-  top: 250px;
-  left: 30%;
+  position: fixed;
+  // top: 250px;
+  // left: 30%;
+  top: 40%;
+  left: 50%;
   z-index: 10;
-  opacity: 1;
+  opacity: 0;
   animation: faAnimado 2s infinite;
+}
+.diplayOn{
+  opacity: 1;
 }
 .playVideoButon:hover{
   animation-play-state: paused;
@@ -127,11 +132,11 @@ svg > text {
   }
 }
 
-
+/*laptop*/
 @media (max-width: 1550px){
   .subTitleProjectWord{
     position: relative;
-    top: 180px;
+    top: 130px;
     left: calc(50% + 110px);
   }
   .subTitleProjectWord2{
@@ -140,6 +145,8 @@ svg > text {
     right: calc(50% - 540px);
   }
 }
+
+
 /*mobile*/
 @media (max-width: 845px){
   .subTitleProjectWord{

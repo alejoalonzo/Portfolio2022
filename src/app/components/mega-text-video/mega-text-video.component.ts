@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { faArrowRight, faPlayCircle  } from '@fortawesome/free-solid-svg-icons'; 
-import { HomeComponent } from '../home/home.component';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-mega-text-video',
@@ -20,7 +21,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
   faArrowRight = faArrowRight;
   faPlayCircle  = faPlayCircle;
 
-  constructor(private elementRef: ElementRef, private componentTopAbout: HomeComponent) { }
+  constructor(private elementRef: ElementRef) { }
 
   ngAfterViewInit(): void {
     if (this.containerRef) {
@@ -29,60 +30,31 @@ export class MegaTextVideoComponent implements AfterViewInit {
       const textElement = this.headerTextElementRef.nativeElement;
       const containerSubTitleProjectWord = this.containerSubTitleProjectWord.nativeElement;
       const playVideoButon = this.playVideoButon.nativeElement;
-      
-      let fontSizevar = 4.5;
-      const maxFontSize = 65;
-      const minFontSize = 4.5;
 
-      let prevScrollPos = window.pageYOffset;
 
       window.addEventListener('click', function(){
         playVideoButon.style.opacity="0"
       })
 
-      window.addEventListener("scroll", function() {
-
-        let currentScrollPos = window.pageYOffset;
-        const componentTop = textElement.getBoundingClientRect().top;
-
-        if (componentTop <= 0){
-
-          if (currentScrollPos > prevScrollPos) {
-            fontSizevar += 0.5; 
-          } else {
-            fontSizevar -= 0.5;
-          }
-          if (fontSizevar >= 5 && fontSizevar <= 65) {  
-            containerRef.style.position = "fixed";
-            containerRef.style.top = "0";
-            playVideoButon.style.position = "fixed";
-          } 
-          else {
-            containerRef.style.position = "relative";
-            playVideoButon.style.position = "relative";
-          }
-
-          if (fontSizevar > maxFontSize) {
-            fontSizevar = maxFontSize;
-          } else if (fontSizevar < minFontSize) {
-            fontSizevar = minFontSize;
-          }
-        }
-        
-        prevScrollPos = currentScrollPos;
-  
-        textElement.style.fontSize =`${fontSizevar}em`;
-
-        if(fontSizevar > 4.5){
-
-          containerSubTitleProjectWord.style.opacity="0"; 
-        }
-        if(fontSizevar <= 4.5){
-          containerSubTitleProjectWord.style.opacity="1"; 
-        }
-
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(textElement,{
+        scrollTrigger: {
+          trigger: textElement,
+          start: "top top",
+          end: "+=2000",
+          // markers: true,
+          scrub: 1,
+          pin: containerRef,
+          onEnter: () => playVideoButon.classList.add("diplayOn"),
+          onLeave: () => playVideoButon.classList.remove("diplayOn"),
+          onEnterBack: () => playVideoButon.classList.add("diplayOn"),
+          onLeaveBack: () => playVideoButon.classList.remove("diplayOn"),
+        },
+        scale:20,
+        x: -50,
+        transformOrigin: "center center", 
       });
-      
+
       videoElement.load();
       document.addEventListener('mousedown', () => {
         videoElement.play().catch((error: any) => {
@@ -99,10 +71,8 @@ export class MegaTextVideoComponent implements AfterViewInit {
 
       if (window.innerWidth <= 768) {
         this.containerRef.nativeElement.style.display = 'none';
+    }    
     }
-      
-    }
-
   }
 
 }
