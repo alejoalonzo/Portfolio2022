@@ -50,7 +50,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
           onEnterBack: () => playVideoButon.classList.add("diplayOn"),
           onLeaveBack: () => playVideoButon.classList.remove("diplayOn"),
         },
-        scale:20,
+        scale:15,
         x: -50,
         transformOrigin: "center center", 
       });

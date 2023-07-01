@@ -25,20 +25,19 @@
                         <span class="spanPorfolio">{{projects.langs}}
                         </span>
                     </div>
-                    <div class="squreTextPorfolio" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
-                    </div>
+                    <a class="seeProjectLink" [routerLink]="['/project', projects._id]"
+                        fragment="projectDetailContainer">
+                        <div class="squreTextPorfolio" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
+                        </div>
+                    </a>
                     <span class="spanPorfolio2" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
-                        <a class="seeProjectLink" [routerLink]="['/project', projects._id]"
-                            fragment="projectDetailContainer">See Project</a>
+                        <!-- <span class="seeProjectLink">See project</span> -->
                     </span>
                 </div>
             </li>
         </ul>
     </div>
 </div>
-<!-- (mouseover)="changeClass=true" (mouseout)="changeClass=false" -->
-<!-- [class.dark-img]="changeClass" -->
-
 
 <!-- footer------------------------------------------------------------------------ -->
 <app-footer></app-footer>

@@ -796,6 +796,7 @@ form input[type="submit"]:hover {
   overflow: hidden;
   height: 49%;
 }
+
 .bgDark{
   background-color: $backgroundColorDarkSecundary;
 }
@@ -854,19 +855,21 @@ form input[type="submit"]:hover {
 }
 .projectView:hover .spanPorfolio{
   display: flex;
+  
 }
 .projectView:hover .spanPorfolio2 {
   display: flex;
-}
-
-
-.seeProjectLink {
-  text-decoration: none;
-  color: $TextColorGlobalDarkBG;
-}
-.seeProjectLink:hover{
   text-decoration: underline;
 }
+
+
+// .seeProjectLink {
+//   text-decoration: underline;
+//   color: $TextColorGlobalDarkBG;
+// }
+// .seeProjectLink:hover{
+//   text-decoration: underline;
+// }
 
 #butonProject {
   background-color: $backgroundColorDarkSecundary;
@@ -890,8 +893,8 @@ form input[type="submit"]:hover {
 }
 .projectView:hover .squreTextPorfolio {
   display: flex;
+  cursor: pointer;
 }
-
 
 
 /******************************************DETAIL***************************************/
