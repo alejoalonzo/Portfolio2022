@@ -29,6 +29,7 @@
     "openai": "^3.2.1",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.4.8",
+    "three": "^0.154.0",
     "tslib": "^2.5.0",
     "zone.js": "^0.11.8"
   },
@@ -39,6 +40,7 @@
     "@types/jasmine": "~3.10.0",
     "@types/mapbox-gl": "^2.7.10",
     "@types/node": "^12.20.55",
+    "@types/three": "^0.152.1",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

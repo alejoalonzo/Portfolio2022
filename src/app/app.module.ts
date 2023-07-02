@@ -22,6 +22,7 @@ import { ChatGPTService } from './services/chatGPTservice';
 import { OpenaiService } from './services/openai.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TextThreeComponent } from './components/text-three/text-three.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -43,7 +44,8 @@ const routerOptions: ExtraOptions = {
     MegaTextVideoComponent,
     ChatComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    TextThreeComponent
     
   ],
   imports: [
@@ -58,7 +60,7 @@ const routerOptions: ExtraOptions = {
   providers: [
     appRoutingProviders,
     OpenaiService,
-    ChatGPTService
+    ChatGPTService,
   ],
   bootstrap: [AppComponent]
 })
