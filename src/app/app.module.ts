@@ -23,7 +23,7 @@ import { OpenaiService } from './services/openai.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TextThreeComponent } from './components/text-three/text-three.component';
-
+import { TextThreeService } from './services/text-three.service'
 
 const routerOptions: ExtraOptions = {
   anchorScrolling: "enabled",
@@ -61,6 +61,7 @@ const routerOptions: ExtraOptions = {
     appRoutingProviders,
     OpenaiService,
     ChatGPTService,
+    TextThreeService
   ],
   bootstrap: [AppComponent]
 })
