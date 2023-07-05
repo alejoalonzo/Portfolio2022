@@ -13,6 +13,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
   @ViewChild('svgElement', { static: false }) svgElementRef!: ElementRef<SVGElement>;
   @ViewChild('playVideoButon', { static: false }) playVideoButon!: ElementRef<SVGElement>;
   @ViewChild('headerE1') containerRef!: ElementRef;
+  @ViewChild('mask') mask!: ElementRef;
   @ViewChild('headerText') zoomElement!: ElementRef;
   @ViewChild('containerSubTitleProjectWord', {static: true}) containerSubTitleProjectWord!: ElementRef;
   @ViewChild("videoEl", { static: true, read: ElementRef })
@@ -30,10 +31,12 @@ export class MegaTextVideoComponent implements AfterViewInit {
       const textElement = this.headerTextElementRef.nativeElement;
       const containerSubTitleProjectWord = this.containerSubTitleProjectWord.nativeElement;
       const playVideoButon = this.playVideoButon.nativeElement;
+      const mask = this.mask.nativeElement;
 
 
       window.addEventListener('click', function(){
         playVideoButon.style.opacity="0"
+        mask.style.opacity="0"
       })
 
       gsap.registerPlugin(ScrollTrigger);

@@ -38,7 +38,7 @@ export class TextThreeComponent implements OnInit {
       const environment = new Environment(typo, particle, container);
     };
   
-    var typo: Font | null = null;
+    var typo: Font = {} as Font;
     const loader = new FontLoader(manager);
     const font = loader.load(
       "https://res.cloudinary.com/dydre7amr/raw/upload/v1612950355/font_zsd4dr.json",
@@ -60,7 +60,7 @@ export class TextThreeComponent implements OnInit {
 
 export class Environment {
 
-  private font: any;
+  private font: Font;
   private particle: any;
   private container: HTMLElement;
   private scene: THREE.Scene;
@@ -68,10 +68,10 @@ export class Environment {
   private renderer!: THREE.WebGLRenderer;
   private createParticles!: CreateParticles;
 
-  constructor(font: Font | null, particle: THREE.Texture, container: HTMLElement) {
+  constructor(font: Font, particle: THREE.Texture, container: HTMLElement) {
     
     this.font = font;
-    console.log("hello: ");
+
     // console.log("font: " + JSON.stringify(font));
     this.particle = particle;
     // console.log("texture: " + JSON.stringify(particle));
@@ -399,11 +399,16 @@ export class CreateParticles {
 
     let shapes = this.font.generateShapes(this.data.text, this.data.textSize);
     let geometry = new THREE.ShapeGeometry(shapes);
-    geometry.computeBoundingBox();
-    console.log('geometry: '+JSON.stringify(geometry.computeBoundingBox()));
 
-      // const xMid =
-      //   -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
+    geometry.computeBoundingBox();
+    console.log('geometry: '+JSON.stringify(this.font));
+
+    
+//------------------------center
+
+//------------------------center
+      //const xMid =
+      //  -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
       // const yMid =
       //   (geometry.boundingBox.max.y - geometry.boundingBox.min.y) / 2.85;
   
