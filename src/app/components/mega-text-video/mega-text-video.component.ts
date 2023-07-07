@@ -36,7 +36,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
 
       window.addEventListener('click', function(){
         playVideoButon.style.opacity="0"
-        mask.style.opacity="0"
+        mask.style.opacity="0.75"
       })
 
       gsap.registerPlugin(ScrollTrigger);

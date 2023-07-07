@@ -4,6 +4,7 @@ import * as THREE from 'three';
 import { Font, FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 
 
+
 @Component({
   selector: 'app-text-three',
   templateUrl: './text-three.component.html',
@@ -123,6 +124,7 @@ export class Environment {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     this.renderer.outputEncoding = THREE.sRGBEncoding;
+    this.renderer.setClearColor(0x2d2f35, 1);
     this.container.appendChild(this.renderer.domElement);
 
     this.renderer.setAnimationLoop(() => {
@@ -324,7 +326,7 @@ export class CreateParticles {
             py > initY + 70 ||
             py < initY - 70
           ) {
-            this.colorChange.setHSL(0.15, 1.0, 0.5);
+            this.colorChange.setHSL(174/360, 0.92, 0.45);
             coulors.setXYZ(
               i,
               this.colorChange.r,
@@ -340,7 +342,7 @@ export class CreateParticles {
               px -= 0.03 * Math.cos(t);
               py -= 0.03 * Math.sin(t);
 
-              this.colorChange.setHSL(0.15, 1.0, 0.5);
+              this.colorChange.setHSL(174/360, 0.92, 0.45);
               coulors.setXYZ(
                 i,
                 this.colorChange.r,
@@ -369,7 +371,7 @@ export class CreateParticles {
               py > initY + 10 ||
               py < initY - 10
             ) {
-              this.colorChange.setHSL(0.15, 1.0, 0.5);
+              this.colorChange.setHSL(174/360, 0.92, 0.45);
               coulors.setXYZ(
                 i,
                 this.colorChange.r,
@@ -396,23 +398,32 @@ export class CreateParticles {
 
   createText() {
     let thePoints: THREE.Vector3[] = [];
-
     let shapes = this.font.generateShapes(this.data.text, this.data.textSize);
     let geometry = new THREE.ShapeGeometry(shapes);
+    
+    geometry.computeBoundingBox();;
+    console.log('geometry: '+JSON.stringify(geometry));
 
-    geometry.computeBoundingBox();
-    console.log('geometry: '+JSON.stringify(this.font));
-
+    const boundingBox = geometry.boundingBox;
+    let xMid = 0;
+    let yMid = 0;
+    if (boundingBox !== null) {
+      xMid = -0.5 * (boundingBox.max.x - boundingBox.min.x);
+      yMid = (boundingBox.max.y - boundingBox.min.y) / 2.85; 
+    }
+  
+    geometry.center();
     
 //------------------------center
 
 //------------------------center
-      //const xMid =
-      //  -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
-      // const yMid =
-      //   (geometry.boundingBox.max.y - geometry.boundingBox.min.y) / 2.85;
+//  const xMid =
+//    -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
+//   const yMid =
+//     (geometry.boundingBox.max.y - geometry.boundingBox.min.y) / 2.85;
   
     geometry.center();
+    
   
     let holeShapes: any[] = [];
   
@@ -448,7 +459,7 @@ export class CreateParticles {
     }
   
     let geoParticles = new THREE.BufferGeometry().setFromPoints(thePoints);
-    //geoParticles.translate(xMid, yMid, 0);
+    geoParticles.translate(xMid, yMid, 0);
   
     geoParticles.setAttribute(
       "customColor",

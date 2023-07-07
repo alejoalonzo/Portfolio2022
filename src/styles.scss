@@ -10,7 +10,7 @@ $titleImpactFont: "IMPACT";
 
 @font-face {
   font-family: "Jaapokki-Regular";
-  src: url("./fonts/Jaapokki-Regular.otf");
+  src: url("./fonts/IMPACT.ttf");
 }
 $titleFont: "Jaapokki-Regular";
 
@@ -250,7 +250,7 @@ header {
 #subTitle:hover{
   color: $backgroundColorGlobalSecundary;
 }
-
+/*
 .scrollDown{
  margin: 700px 60px 0 60px;
  justify-content: end;
@@ -283,7 +283,7 @@ header {
   font-size: 1.3rem;
   text-align: center;
   color: $customBlue;
-}
+}*/
 
 @keyframes backToTop {
   0% {
@@ -307,6 +307,52 @@ header {
      bottom: 50px;
   }
 }
+
+//  mouse Scroll
+.fieldScrollAnimation {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 100;
+}
+
+.mouseScroll {
+  width: 25px;
+  height: 45px;
+  border: 2px solid $customBlue;
+  border-radius: 30px;
+  position: relative;
+}
+
+.mouseScroll::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $customBlue;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+
 
 
 /*---------------------------------sideBars-------------------------------------*/
@@ -514,7 +560,7 @@ footer {
 }
 .titles {
   font-family: $titleFont;
-  font-size: 40px;
+  font-size: 80px;
   color: $TextColorGlobalPrimary;
   font-weight: 400;
   margin-bottom: 30px;

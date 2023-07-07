@@ -15,7 +15,6 @@ import { ErrorComponent } from './components/error/error.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
-import { ParticleAnimationComponent } from './components/particle-animation/particle-animation.component';
 import { MegaTextVideoComponent } from './components/mega-text-video/mega-text-video.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { ChatGPTService } from './services/chatGPTservice';
@@ -40,7 +39,6 @@ const routerOptions: ExtraOptions = {
     ErrorComponent,
     DetailComponent,
     EditComponent,
-    ParticleAnimationComponent,
     MegaTextVideoComponent,
     ChatComponent,
     FooterComponent,
