@@ -14,6 +14,12 @@
     </span>
     <fa-icon [icon]="faArrowDown"></fa-icon>
 </div> -->
+<!-- <div class="alexUpsideDown"><img class="imgAlexUpsideDown" src="../../../assets/media/alejxUpSideDown.png" alt=""></div> -->
+<div class="alexMbile">alex</div>
+<div>
+    <a #webDeveloper class="webDeveloper" href="/assets/media/ManuelAlejandroCV.pdf" target="blank">Web Developer</a>
+</div>
+
 <div #fieldScrollAnimation class="fieldScrollAnimation">
     <div class="mouseScroll"></div>
 </div>
@@ -21,7 +27,7 @@
 <app-mega-text-video></app-mega-text-video>
 
 <!-- about------------------------------------------------------------------------ -->
-<section id="aboutMe" #aboutMe class="aboutMe">
+<section id="aboutMe" #aboutMe class="aboutMe" (mouseenter)="hideMouseScroolAnimation()">
     <div class="aboutMeContainer">
         <div id="imgAbout">
             <img id="imgAbout1" src="../assets/media/about.jpg" alt="About">

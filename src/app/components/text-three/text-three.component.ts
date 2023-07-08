@@ -4,7 +4,6 @@ import * as THREE from 'three';
 import { Font, FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 
 
-
 @Component({
   selector: 'app-text-three',
   templateUrl: './text-three.component.html',
@@ -12,23 +11,23 @@ import { Font, FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 })
 export class TextThreeComponent implements OnInit {
   @ViewChild('magic', { static: true }) magic!: ElementRef;
-  @ViewChild('playground') playground!: HTMLElement;
-  @ViewChild('bottomPosition') bottomPosition!: HTMLElement;
 
   constructor(private textThreeService: TextThreeService) { 
     //textThreeService.Charge(['text-three']);
   }
 
   ngOnInit(): void {
-    if (
-      document.readyState === 'complete' ||
-      (document.readyState !== 'loading' && !document.documentElement.scroll)
-    ) {
-      this.preload();
-    } else {
-      document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth >= 768){
+      if (
+        document.readyState === 'complete' ||
+        (document.readyState !== 'loading' && !document.documentElement.scroll)
+      ) {
         this.preload();
-      });
+      } else {
+        document.addEventListener('DOMContentLoaded', () => {
+          this.preload();
+        });
+      }
     }
   }
 
@@ -123,7 +122,7 @@ export class Environment {
 
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    this.renderer.outputEncoding = THREE.sRGBEncoding;
+    this.renderer.outputColorSpace = THREE.SRGBColorSpace;
     this.renderer.setClearColor(0x2d2f35, 1);
     this.container.appendChild(this.renderer.domElement);
 
@@ -402,7 +401,7 @@ export class CreateParticles {
     let geometry = new THREE.ShapeGeometry(shapes);
     
     geometry.computeBoundingBox();;
-    console.log('geometry: '+JSON.stringify(geometry));
+    // console.log('geometry: '+JSON.stringify(geometry));
 
     const boundingBox = geometry.boundingBox;
     let xMid = 0;

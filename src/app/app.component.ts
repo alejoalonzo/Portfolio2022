@@ -38,9 +38,9 @@ export class AppComponent {
 
   //efecto------------------
   @ViewChild('titleNamed') titleNamed!: ElementRef;
-  @ViewChild('navbar')
-  navbar!: ElementRef;
-
+  @ViewChild('navbar') navbar!: ElementRef;
+ 
+  
   srt: any;
   arrFromStr!: string[];
 
@@ -119,11 +119,9 @@ export class AppComponent {
         //document.getElementById("navbar").style.top = "-100px"
         posAnteriorScrol = posActualScrol;
     }
-  
-
+    
   }
 
-  
   toggleShow() {
     this.isShown = ! this.isShown;  
   }

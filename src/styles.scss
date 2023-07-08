@@ -9,10 +9,10 @@ $titleImpactFont: "IMPACT";
 
 
 @font-face {
-  font-family: "Jaapokki-Regular";
+  font-family: "IMPACT";
   src: url("./fonts/IMPACT.ttf");
 }
-$titleFont: "Jaapokki-Regular";
+$titleFont: "IMPACT";
 
 @font-face {
   font-family: "Jaapokkienchance-Regular";
@@ -353,7 +353,57 @@ header {
   }
 }
 
+.alexMbile{
+  display: none;
+}
 
+.webDeveloper {
+  width: 230px;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  color: #eeeef0;
+  font-size: 2em;
+  z-index: 2;
+  font-family: Impact;
+  display: inline-block;
+}
+
+.webDeveloper a {
+  color: #eeeef0;
+}
+
+.webDeveloper::after {
+  content: "Resume";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  background-color: transparent;
+  color: $customBlue;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateX(-100%);
+}
+
+.webDeveloper:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+  cursor: pointer;
+}
+/*
+.alexUpsideDown{
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  z-index: 2;
+  width: 130px;
+}
+
+.imgAlexUpsideDown {
+  width: 100%;
+  height: auto;
+}*/
 
 /*---------------------------------sideBars-------------------------------------*/
 .boxSideBars {
@@ -1099,8 +1149,21 @@ form input[type="submit"]:hover {
   #myVideo{
     min-height: 80%;
   }
-  .scrollDown, .scrollDownHomeLeft span,.scrollDownHomeRight span{
+  .scrollDown,.fieldScrollAnimation, .mouseScroll, .mouseScroll::before, .scrollDownHomeLeft span,.scrollDownHomeRight span{
     display: none;
+  }
+  .alexMbile{
+    // width: 500px;
+    display: block;
+    color: $TextColorGlobalSecundary;
+    font-family: $titleFont;
+    font-size: 10em;
+    position: absolute;
+    // top: 25%;
+    // left:  calc(50% - 250px);
+    bottom: 3%;
+    left:  5%;
+    text-align: center;
   }
 
   nav {
