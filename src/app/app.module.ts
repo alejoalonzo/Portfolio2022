@@ -44,7 +44,6 @@ const routerOptions: ExtraOptions = {
     FooterComponent,
     HeaderComponent,
     TextThreeComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -52,14 +51,14 @@ const routerOptions: ExtraOptions = {
     HttpClientModule,
     FormsModule,
     routing,
-    FontAwesomeModule, 
+    FontAwesomeModule,
     RouterModule.forRoot(appRoutingProviders, routerOptions)
   ],
   providers: [
     appRoutingProviders,
     OpenaiService,
     ChatGPTService,
-    TextThreeService
+    TextThreeService,
   ],
   bootstrap: [AppComponent]
 })
