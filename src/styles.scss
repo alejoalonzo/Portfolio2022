@@ -63,6 +63,7 @@ body {
   );
 }
 
+
 /*global colors*/
 $backgroundColorGlobalPrimary: #ffffff;
 $backgroundColorGlobalSecundary: #f4f4f6;
@@ -367,6 +368,9 @@ header {
   z-index: 2;
   font-family: Impact;
   display: inline-block;
+}
+.webDeveloper::selection {
+  background-color: #2d2f35; 
 }
 
 .webDeveloper a {
