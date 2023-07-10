@@ -28,7 +28,7 @@
     "jquery": "^3.6.4",
     "openai": "^3.2.1",
     "rxjs": "~7.5.0",
-    "sweetalert2": "^11.4.8",
+    "sweetalert2": "^11.7.12",
     "three": "^0.154.0",
     "tslib": "^2.5.0",
     "zone.js": "^0.13.1"
