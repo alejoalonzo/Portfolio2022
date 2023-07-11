@@ -23,6 +23,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TextThreeComponent } from './components/text-three/text-three.component';
 import { TextThreeService } from './services/text-three.service'
+import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
+import { environment } from '../environments/environment';
 
 
 const routerOptions: ExtraOptions = {
@@ -53,6 +55,7 @@ const routerOptions: ExtraOptions = {
     FormsModule,
     routing,
     FontAwesomeModule,
+    RecaptchaV3Module,
     RouterModule.forRoot(appRoutingProviders, routerOptions)
   ],
   providers: [
@@ -60,6 +63,10 @@ const routerOptions: ExtraOptions = {
     OpenaiService,
     ChatGPTService,
     TextThreeService,
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: environment.recaptcha.siteKey,
+    }
   ],
   bootstrap: [AppComponent]
 })
