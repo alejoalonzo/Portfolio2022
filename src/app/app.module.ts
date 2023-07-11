@@ -24,6 +24,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { TextThreeComponent } from './components/text-three/text-three.component';
 import { TextThreeService } from './services/text-three.service'
 
+
 const routerOptions: ExtraOptions = {
   anchorScrolling: "enabled",
   scrollPositionRestoration: 'enabled'
