@@ -4,6 +4,7 @@ import { filter, map } from "rxjs";
 import { OpenaiService } from "./openai.service";
 
 
+
 declare var $:any;//Bootstrap-To work with JQuery
 const headers = new HttpHeaders().set('Content-type', 'application/json');
 
@@ -20,7 +21,7 @@ export class ChatGPTService {
     });
   }
 
-  getDataFromOpenAI(text: string){
+  getDataFromOpenAI(text: string, token: string){
     const urlOpenAI = `https://api.openai.com/v1/engines/text-davinci-002/completions`;
 
     const requestBody = {
@@ -30,7 +31,8 @@ export class ChatGPTService {
     };
 
     const requestOptions = {
-      headers: headers.set('Authorization', `Bearer ${this.apiKey}`)
+      headers: headers.set('Authorization', `Bearer ${this.apiKey}`),
+      params: { recaptcha_token: token }
     };
 
     this.http.post(urlOpenAI, requestBody, requestOptions).pipe(
