@@ -88,6 +88,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
 
       if (window.innerWidth <= 768) {
         this.containerRef.nativeElement.style.display = 'none';
+        this.viewProjectsButonWORK.nativeElement.style.display = 'none';
     }    
     }
   }

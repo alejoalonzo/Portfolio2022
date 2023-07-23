@@ -111,3 +111,16 @@
         background-color: $TextColorGlobalSecundary;
       }
 }
+
+@media (max-width: 845px){
+    .dsc-carousel__content-item h1 {
+        font-size: 3em;
+    }
+    .dsc-carousel__content-item p {
+        width: 70%;
+        text-align: justify;
+    }
+    .dsc-carousel__btns {
+        display: none;
+    }
+}
