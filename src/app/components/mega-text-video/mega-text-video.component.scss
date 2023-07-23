@@ -108,8 +108,26 @@ svg > text {
   top: 0; 
   // width: 100%;
 }
+.viewProjectsButonWORK{
+  width: 400px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+  font-size: 2em;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+}
+.viewProjectsButonWORKspan{
+  color: #35373e;
+}
+.viewProjectsButonWORKspan:hover{
+  cursor: pointer;
+  color: #00ADB5;
+}
 
-.playVideoButon{
+.playVideoButon {
   font-size: 3em;
   color: #eeeef0;
   position: fixed;

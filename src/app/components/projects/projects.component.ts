@@ -3,6 +3,8 @@ import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Global } from '../../services/global';
 import { query, style } from '@angular/animations';
+import { ICarouselItem } from '../slider/slider-metadata'
+import { SLIDER_DATA } from '../slider/slider.const'
 
 @Component({
   selector: 'app-projects',
@@ -14,6 +16,7 @@ export class ProjectsComponent implements OnInit {
   public pro: Project[] = [];
   public url: String;
   public changeClass:boolean;
+  public sliderData: ICarouselItem[] = SLIDER_DATA;
 
   constructor(
     private _projectService: ProjectService
@@ -31,7 +34,6 @@ export class ProjectsComponent implements OnInit {
       response=>{
         if(response.projects){
           this.pro = response.projects;
-          console.log(response);
         }
         
       }

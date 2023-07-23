@@ -1,56 +1,64 @@
-<div class="aboutMe" *ngIf="project">
-    <div class="aboutMeContainer" id="projectDetailContainer">
-        <img class="imgeLeftMedium" src="{{url+'/getImage/'+project.image}}" alt="Project image" *ngIf="project.image">
-        <div class="textAbout">
-            <h3 class="titles">
+<div class="detailProject" *ngIf="project">
+    <div class="descriptionsDetail marginTop100" id="">
+        <div class="wrapTitleAndDescriptionDetailsProject">
+            <div class="titleDetailProject">
                 {{project.name}}
-            </h3>
-            <span class="descriptionAbout">
-                {{project.description}}
-            </span>
-            <h3 class="category">Category: {{project.category}}</h3>
-            <h3 class="languages">Languages</h3>
-            <span class="languages">{{project.langs}}</span>
-            <div class="bottonsProjecrtsDetail">
-                <a class="seeProjectLink" href="{{project.repository}}" target="_blank" rel="noopener noreferrer">
-                    <button>
-                        <fa-icon [icon]="faGitHub" class="socialIcons"></fa-icon>
-                        See this repository
-
+            </div>
+            <div class="descriptionsDetailText">
+                <span class="">
+                    {{project.description}}
+                </span>
+                <div class="mt-2">Category: {{project.category}}</div>
+                <div class="">Languages: {{project.langs}}</div>
+                <div class="displayNone" *ngIf="confirm == false">
+                    <a [routerLink]="['/edit', project._id]"><button>
+                            Set project
+                        </button></a>
+                    <button (click)="setConfirm(true)">
+                        Delete project
                     </button>
-                </a>
-                <a class="seeProjectLink" href="{{project.preview}}" target="_blank" rel="noopener noreferrer">
-                    <button>
-                        <fa-icon [icon]="faYoutube" class="socialIcons"></fa-icon>
-                        Watch a preview
+                </div>
+                <div class="displayNone" *ngIf="confirm == true">
+                    <a (click)="setConfirm(false)"><button>
+                            Cancel
+                        </button></a>
+                    <button (click)="deleteProject(project._id)">
+                        Permanently delete
                     </button>
-                </a>
-
+                </div>
             </div>
-            <div class="bottonsProjecrtsDetail displayNone" *ngIf="confirm == false">
-                <a [routerLink]="['/edit', project._id]"><button>
-                        Set project
-                    </button></a>
-                <button (click)="setConfirm(true)">
-                    Delete project
-                </button>
-            </div>
-            <div class="bottonsProjecrtsDetail" *ngIf="confirm == true">
-                <a (click)="setConfirm(false)"><button>
-                        Cancel
-                    </button></a>
-                <button (click)="deleteProject(project._id)">
-                    Permanently delete
-                </button>
-            </div>
-            <a [routerLink]="['/projects']" fragment="portfolioPage">
-                <button class="bottonsGoBack">
-                    <fa-icon [icon]="faArrowLeft"></fa-icon>&nbsp; &nbsp;Go back to all projects
-                </button>
-            </a>
         </div>
     </div>
+    <img class="imgDetailsProject marginTop100" src="{{url+'/getImage/'+project.image}}" alt="Project image"
+        *ngIf="project.image">
 </div>
+<div class="bottonsFooterDetalsProject">
+    <div class="bottonsFooterDetalsProjectLeft">
+        <a [routerLink]="['/projects']" fragment="portfolioPage">
+            <div class="bottonsFooterDetalsProjectTextAndIcon">
+                <fa-icon [icon]="faArrowLeft" class="socialIcons"></fa-icon>&nbsp; &nbsp;
+            </div>
+        </a>
+    </div>
+    <div class="bottonsFooterDetalsProjectRight">
+        <a class="bottonsFooterDetalsProjectTextAndIcon" href="{{project.repository}}" target="_blank"
+            rel="noopener noreferrer">
+            <div>
+                <span class="textIconsDetails">See this repository</span>
+                <fa-icon [icon]="faGitHub" class="socialIcons"></fa-icon>
+            </div>
+        </a>
+        <a class="bottonsFooterDetalsProjectTextAndIcon marginLeft" href="{{project.preview}}" target="_blank"
+            rel="noopener noreferrer">
+            <div>
+                <span class="textIconsDetails">Watch a preview</span>
+                <fa-icon [icon]="faYoutube" class="socialIcons"></fa-icon>
+            </div>
+        </a>
+    </div>
+</div>
+
+
 
 
 <!-- (click)="deleteProject(project._id)"> -->

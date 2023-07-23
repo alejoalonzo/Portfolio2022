@@ -12,6 +12,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
   @ViewChild('headerText', { static: false }) headerTextElementRef!: ElementRef<SVGTextElement>;
   @ViewChild('svgElement', { static: false }) svgElementRef!: ElementRef<SVGElement>;
   @ViewChild('playVideoButon', { static: false }) playVideoButon!: ElementRef<SVGElement>;
+  @ViewChild('viewProjectsButonWORK', { static: false }) viewProjectsButonWORK!: ElementRef<SVGElement>;
   @ViewChild('headerE1') containerRef!: ElementRef;
   @ViewChild('mask') mask!: ElementRef;
   @ViewChild('headerText') zoomElement!: ElementRef;
@@ -31,6 +32,7 @@ export class MegaTextVideoComponent implements AfterViewInit {
       const textElement = this.headerTextElementRef.nativeElement;
       const containerSubTitleProjectWord = this.containerSubTitleProjectWord.nativeElement;
       const playVideoButon = this.playVideoButon.nativeElement;
+      const viewProjectsButonWORK = this.viewProjectsButonWORK.nativeElement;
       const mask = this.mask.nativeElement;
 
 
@@ -48,10 +50,22 @@ export class MegaTextVideoComponent implements AfterViewInit {
           // markers: true,
           scrub: 1,
           pin: containerRef,
-          onEnter: () => playVideoButon.classList.add("diplayOn"),
-          onLeave: () => playVideoButon.classList.remove("diplayOn"),
-          onEnterBack: () => playVideoButon.classList.add("diplayOn"),
-          onLeaveBack: () => playVideoButon.classList.remove("diplayOn"),
+          onEnter: () =>{
+            playVideoButon.classList.add("diplayOn");
+            viewProjectsButonWORK.classList.add("diplayOn");
+          },
+          onLeave: () => {
+            playVideoButon.classList.remove("diplayOn");
+            viewProjectsButonWORK.classList.remove("diplayOn");
+          },
+          onEnterBack: () => {
+            playVideoButon.classList.add("diplayOn");
+            viewProjectsButonWORK.classList.add("diplayOn");
+          },
+          onLeaveBack: () => {
+            playVideoButon.classList.remove("diplayOn");
+            viewProjectsButonWORK.classList.remove("diplayOn");
+          },
         },
         scale:15,
         x: -50,

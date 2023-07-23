@@ -16,15 +16,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
 import { MegaTextVideoComponent } from './components/mega-text-video/mega-text-video.component';
-import { ChatComponent } from './components/chat/chat.component';
-import { ChatGPTService } from './services/chatGPTservice';
-import { OpenaiService } from './services/openai.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TextThreeComponent } from './components/text-three/text-three.component';
-import { TextThreeService } from './services/text-three.service'
-import { RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module } from 'ng-recaptcha';
-import { environment } from '../environments/environment';
+import { TextThreeService } from './services/text-three.service';
+import { SliderComponent } from './components/slider/slider.component'
 
 
 const routerOptions: ExtraOptions = {
@@ -43,10 +39,10 @@ const routerOptions: ExtraOptions = {
     DetailComponent,
     EditComponent,
     MegaTextVideoComponent,
-    ChatComponent,
     FooterComponent,
     HeaderComponent,
-    TextThreeComponent
+    TextThreeComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -55,18 +51,11 @@ const routerOptions: ExtraOptions = {
     FormsModule,
     routing,
     FontAwesomeModule,
-    RecaptchaV3Module,
     RouterModule.forRoot(appRoutingProviders, routerOptions)
   ],
   providers: [
     appRoutingProviders,
-    OpenaiService,
-    ChatGPTService,
-    TextThreeService,
-    {
-      provide: RECAPTCHA_V3_SITE_KEY,
-      useValue: environment.recaptcha.siteKey,
-    }
+    TextThreeService
   ],
   bootstrap: [AppComponent]
 })

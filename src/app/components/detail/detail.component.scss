@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "IMPACT";
+    src: url("../../../fonts/IMPACT.ttf");
+  }
+  $titleImpactFont: "IMPACT";
+
+.detailProject{
+    width: 100%;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.descriptionsDetail{
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 65%;
+}
+.imgDetailsProject{
+    justify-content: flex-end;
+    max-width: 35%;
+}
+
+.titleDetailProject{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    font-size: 15em;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    text-align: end;
+    padding-right: 10px;
+}
+.descriptionsDetailText{
+    color: #acafba;
+    max-width: 50%; 
+    margin-top: 50px;  
+}
+
+.bottonsFooterDetalsProject{
+    display: flex;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 50px;
+    border-top: 1px solid #acafba;
+}
+.bottonsFooterDetalsProjectLeft{
+    width: 50%;
+}
+.bottonsFooterDetalsProjectRight{
+    width: 50%;
+    justify-content: flex-end;
+    text-align: end;
+}
+.marginLeft{
+    margin-left: 20px;
+}
+.bottonsFooterDetalsProjectTextAndIcon{
+    display: inline-block; 
+    color: #acafba;
+    background-color: transparent;
+}
+.textIconsDetails{
+    margin-right: 3px;
+}
+
+// .bottonsFooterDetalsProjectTextAndIcon div {
+//     display: flex;
+//     align-items: center; /* Centrar el texto verticalmente con el icono */
+// }
+
+.bottonsFooterDetalsProjectTextAndIcon:hover div {
+    color: #f4f4f6; 
+}
+
+.bottonsFooterDetalsProjectTextAndIcon:hover .socialIcons {
+    color: #00ADB5; 
+}
+
+@media (max-width: 1550px){
+    .titleDetailProject{
+        font-size: 13em;
+    }
+}
+
+@media (max-width: 845px){
+    .detailProject {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .descriptionsDetail {
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .titleDetailProject {
+        font-size: 5em;
+        margin-top: 120px;
+        text-align: start;
+    }
+    .descriptionsDetailText {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 10%;
+    }
+    .imgDetailsProject {
+        justify-content: flex-end;
+        max-width: 100%;
+    }
+    .detailProject>.marginTop100 {
+        margin-top: 10px;
+    }
+    .textIconsDetails{
+        display: none;
+    }
+}
