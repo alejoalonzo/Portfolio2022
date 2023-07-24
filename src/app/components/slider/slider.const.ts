@@ -8,7 +8,7 @@ export const SLIDER_DATA: ICarouselItem []=[
             second: 'BOT'
         },
         subtitle: 'This is an AI assistant that is powered by ChatGPT model to deliver any AI-powered search, conversation, text completionand other advanced AI features. This has been built using the following technologies: Angular 16, Node, OpenAi API, Bootstrap, JQuery, TS, Git, GitHub.',
-        link: '/',
+        link: 'https://alejoalonzo.github.io/ChatGPT/',
         image: '../../assets/media/chatGPT1.jpg',
     },
     {

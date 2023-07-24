@@ -66,6 +66,75 @@
                 color: $backgroundColorGlobalSecundary;
                 font-size: 1em;
             }
+            /*------------buton--------------------*/
+            .buttonGoToProject{
+                position: relative;
+                background: white;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 1.3em;
+                letter-spacing: 00.1em;
+                font-weight: 400;
+                padding: 10px 30px;
+                transition: 0.5s;
+            }
+            
+            .buttonGoToProject:hover{
+                background: var(--clr);
+                color: var(--clr);
+                letter-spacing: 00.35em;
+                box-shadow: 0 0 15px var(--clr);
+            }
+            
+            .buttonGoToProject::before{
+                content: '';
+                position: absolute;
+                inset: 2px;
+                background: $backgroundColorDarkSecundary;
+            }
+            .buttonGoToProject>span{
+                position: relative;
+                z-index: 1; 
+            }
+            i{
+                position: absolute;
+                inset: 0;
+                display: block;
+            }
+            i::before
+            {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 80%;
+                width: 10px;
+                height: 4px;
+                background: $backgroundColorDarkSecundary;
+                transform: translateX(-50%) skewX(325deg);
+                transition: 00.5s;
+            }
+            .buttonGoToProject:hover i::before{
+                width: 20px;
+                left: 20%;
+            }
+            
+            i::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 20%;
+                width: 10px;
+                height: 4px;
+                background: $backgroundColorDarkSecundary;
+                transform: translateX(-50%) skew(325deg);
+                transition: 00.5s;
+            }
+            .buttonGoToProject:hover i::after
+            {
+                width: 20px;
+                left: 80%;
+            }
         }
     }
     &__btns{
