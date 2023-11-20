@@ -11,7 +11,7 @@
                 <h1><a [href]="section.link" target="_blank"><span class="span1">{{section?.title?.first}}</span><span
                             class="span2">{{section?.title?.second}}</span> </a></h1>
                 <p>{{section?.subtitle}}</p>
-                <a class="buttonGoToProject" href="https://alejoalonzo.github.io/ChatGPT/" target="_blank"
+                <a class="buttonGoToProject" href={{section?.link}} target="_blank"
                     style="--clr:#00ADB5"><span>view</span><i></i></a>
             </div>
         </ng-container>

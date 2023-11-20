@@ -1,0 +1,42 @@
+<div class="portfolioPage">
+    <div class="containerTitle">
+        <h2 id="projectsTitle">
+            My Projects
+        </h2>
+
+        <span>
+            A small gallery of recent projects chosen by me. I've done them all together with amazing people from
+            companies around the globe.
+        </span>
+    </div>
+</div>
+<div class="portfolioPage">
+    <div class="projectsContainer">
+        <ul class="bgDark" id="portfolioPage">
+            <li class="projectView" *ngFor="let projects of pro">
+                <div class="cardsProjects">
+                    <img src="{{url+'/getImage/'+projects.image}}" alt="Project image" class="imgPotfolioPage dark-img"
+                        [class.backgroundDarkImgPorfolio]="changeClass">
+                    <div class="infoProjectPorfolioCard">
+                        <h3 class="hTresPortfolio">
+                            {{projects.name}}
+                        </h3>
+                        <span class="spanPorfolio">{{projects.langs}}
+                        </span>
+                    </div>
+                    <a class="seeProjectLink" [routerLink]="['/project', projects._id]"
+                        fragment="projectDetailContainer">
+                        <div class="squreTextPorfolio" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
+                        </div>
+                    </a>
+                    <span class="spanPorfolio2" (mouseover)="changeClass=true" (mouseout)="changeClass=false">
+                        <!-- <span class="seeProjectLink">See project</span> -->
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- footer------------------------------------------------------------------------ -->
+<app-footer></app-footer>

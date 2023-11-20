@@ -8,6 +8,7 @@ import { CreateComponent } from './components/create/create.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DetailComponent } from "./components/detail/detail.component";
 import { EditComponent } from "./components/edit/edit.component";
+import { MoreProjectsComponent } from "./components/more-projects/more-projects.component";
 //import { homedir } from "os";
 
 
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
     {path: '', component:HomeComponent},
     {path: 'contact', component:ContactComponent},
     {path: 'projects', component:ProjectsComponent},
+    {path: 'more-projects', component:MoreProjectsComponent},
     {path: 'create', component:CreateComponent},
     {path: 'project/:id', component: DetailComponent},
     {path: 'edit/:id', component: EditComponent},

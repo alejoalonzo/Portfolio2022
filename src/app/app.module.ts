@@ -20,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TextThreeComponent } from './components/text-three/text-three.component';
 import { TextThreeService } from './services/text-three.service';
-import { SliderComponent } from './components/slider/slider.component'
+import { SliderComponent } from './components/slider/slider.component';
+import { MoreProjectsComponent } from './components/more-projects/more-projects.component'
 
 
 const routerOptions: ExtraOptions = {
@@ -42,7 +43,8 @@ const routerOptions: ExtraOptions = {
     FooterComponent,
     HeaderComponent,
     TextThreeComponent,
-    SliderComponent
+    SliderComponent,
+    MoreProjectsComponent
   ],
   imports: [
     BrowserModule,

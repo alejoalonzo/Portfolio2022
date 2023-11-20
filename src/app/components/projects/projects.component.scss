@@ -1,0 +1,21 @@
+.textFoot  {
+    width: 100%;
+    h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        color: #f4f4f6;
+        font-size: 32em;
+        text-align: center;
+        line-height: 1;
+    }
+  } 
+
+  @media (max-width: 1550px){
+    .textFoot  {
+        h1{
+            font-size: 25em;
+        }
+      } 
+  }

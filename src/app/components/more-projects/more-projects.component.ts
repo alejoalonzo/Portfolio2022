@@ -2,20 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
 import { Global } from '../../services/global';
-import { ICarouselItem } from '../slider/slider-metadata'
-import { SLIDER_DATA } from '../slider/slider.const'
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
+  selector: 'app-more-projects',
+  templateUrl: './more-projects.component.html',
+  styleUrls: ['./more-projects.component.scss'],
   providers: [ProjectService]
 })
-export class ProjectsComponent implements OnInit {
+export class MoreProjectsComponent implements OnInit {
   public pro: Project[] = [];
   public url: String;
   public changeClass:boolean;
-  public sliderData: ICarouselItem[] = SLIDER_DATA;
 
   constructor(
     private _projectService: ProjectService
@@ -39,4 +36,3 @@ export class ProjectsComponent implements OnInit {
     )
   }
 }
-//1Z2E76E20475543766
