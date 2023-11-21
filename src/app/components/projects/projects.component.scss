@@ -11,11 +11,21 @@
         line-height: 1;
     }
   } 
-
+// laptop
   @media (max-width: 1550px){
     .textFoot  {
         h1{
             font-size: 25em;
+        }
+      } 
+  }
+
+
+//   mobile
+  @media (max-width: 845px){
+    .textFoot  {
+        h1{
+            font-size: 6em;
         }
       } 
   }
